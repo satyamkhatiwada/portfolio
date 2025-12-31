@@ -99,7 +99,7 @@ function PersonalStatement() {
       <Location />
       <div className="space-y-1.5">
         <p className="text-spotify-gray text-sm">
-          QA Engineer • Automation Specialist • Cybersecurity Starter
+          QA & Automation • Cybersecurity Enthusiast
         </p>
       </div>
       <h4 className="text-sm">

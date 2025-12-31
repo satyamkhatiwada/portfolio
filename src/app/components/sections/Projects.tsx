@@ -9,10 +9,10 @@ import { FaArrowDown } from "react-icons/fa6";
 export default function Projects({ onSetExperienceSection }: ProjectsProps) {
   return (
     <div
-      className="max-md:hidden max-lg:col-span-1 max-lg:row-span-1 col-span-2 row-span-6 col-start-5 bg-spotify-light-dark rounded-xl overflow-hidden"
+      className="max-md:hidden max-lg:col-span-1 max-lg:row-span-1 col-span-2 row-span-6 col-start-5 bg-spotify-light-dark rounded-xl overflow-hidden flex flex-col"
       id="projects"
     >
-      <div className="p-4">
+      <div className="p-4 flex-shrink-0">
         <div className="flex gap-3 justify-center">
           {/* Primary Button (Green) */}
           <button
@@ -40,7 +40,9 @@ export default function Projects({ onSetExperienceSection }: ProjectsProps) {
           </button>
         </div>
       </div>
-      <StickyScroll content={projectLists} />
+      <div className="flex-grow overflow-hidden">
+        <StickyScroll content={projectLists} />
+      </div>
     </div>
   );
 }
@@ -112,20 +114,4 @@ const projectLists: {
       </a>
     ),
   },
-  // {
-  //   title: "🥑 Fiber (Calhacks 2024)",
-  //   description:
-  //     "An AI-powered mobile application to scan the barcodes of groceries, providing comprehensive nutritional value, additives, and organic dimension for the users. This allows users to easily identify healthier options while grocery shopping.",
-  //   content: (
-  //     <a target="_blank" href="https://github.com/Smit2553/Fiber">
-  //       <Image
-  //         src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/fiber.png`}
-  //         alt="Fiber Project"
-  //         loading="lazy"
-  //         width={500}
-  //         height={300}
-  //       />
-  //     </a>
-  //   ),
-  // },
 ];
