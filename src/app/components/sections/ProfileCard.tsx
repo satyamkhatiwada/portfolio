@@ -26,7 +26,7 @@ export default function ProfileCard() {
         </BackgroundGradient>
 
         <PersonalStatement />
-        <Location />
+        
         {/* <Booking /> */}
       </div>
     </div>
@@ -98,14 +98,15 @@ function PersonalStatement() {
         <p className="text-spotify-gray text-sm">
           QA Engineer • Automation Specialist • Cybersecurity Starter
         </p>
+        <Location />
       </div>
       <h4 className="text-sm">
         <span>
           I&apos;m a QA Engineer with 2+ years of experience, starting as an{" "}
           <span className="text-spotify-green">intern</span> and 
           quickly growing into a{" "}  
-          <span className="text-spotify-green">mid-level</span>
-           role by consistently delivering results and taking 
+          <span className="text-spotify-green">mid-level </span>
+          role by consistently delivering results and taking 
           ownership. I&apos;ve led multiple projects, worked directly with stakeholders, and 
           supported clients to make sure releases go out smoothly.
           
