@@ -102,6 +102,7 @@ const languageItems: {
         width={32}
         height={32}
         alt="MS Dynamics"
+        className="brightness-110 saturate-125"
       />
     ),
   },
@@ -125,6 +126,7 @@ const languageItems: {
         width={32}
         height={32}
         alt="Excel"
+        className="brightness-125 saturate-150"
       />
     ),
   },
