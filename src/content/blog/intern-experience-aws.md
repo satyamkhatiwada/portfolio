@@ -5,7 +5,7 @@ date: "August 14, 2025"
 readTime: "9 min read"
 image: "/blogs/aws.jpeg"
 slug: "intern-experience-aws"
-author: "Luan Nguyen"
+author: "Satyam Khatiwada"
 tags:
   ["AWS", "Internship", "Software Engineering", "Bedrock", "Seattle", "Career"]
 category: "Career & Experience"

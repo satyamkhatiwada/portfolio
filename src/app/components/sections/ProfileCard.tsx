@@ -17,7 +17,7 @@ export default function ProfileCard() {
         <BackgroundGradient containerClassName="rounded-[40px] place-self-center">
           <Image
             src="/luan_real.jpg"
-            alt="Luan Nguyen"
+            alt="Satyam Khatiwada"
             width={400}
             height={400}
             objectFit="none"
@@ -94,9 +94,9 @@ function PersonalStatement() {
   return (
     <div className="flex flex-col gap-3 px-4">
       <div className="space-y-1.5">
-        <h1 className="text-3xl font-semibold">Luan Nguyen</h1>
+        <h1 className="text-3xl font-semibold">Satyam Khatiwada</h1>
         <p className="text-spotify-gray text-sm">
-          Engineer • Designer • Artist
+          QA Engineer • Automation Specialist • Cybersecurity Starter
         </p>
       </div>
       <h4 className="text-sm">
