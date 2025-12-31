@@ -35,7 +35,7 @@ export default function ProfileCard() {
 
 function Location() {
   return (
-    <div className="text-lg px-4">
+    <div className="text-lg">
       <div className="flex items-center gap-2 font-medium">
         <IoLocationOutline className="text-spotify-green text-2xl" />
         Kathmandu, Nepal
