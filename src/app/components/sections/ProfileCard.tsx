@@ -105,7 +105,7 @@ function PersonalStatement() {
           <span className="text-spotify-green">intern</span> and 
           quickly growing into a{" "}  
           <span className="text-spotify-green">mid-level</span>
-          role by consistently delivering results and taking 
+           role by consistently delivering results and taking 
           ownership. I&apos;ve led multiple projects, worked directly with stakeholders, and 
           supported clients to make sure releases go out smoothly.
           
