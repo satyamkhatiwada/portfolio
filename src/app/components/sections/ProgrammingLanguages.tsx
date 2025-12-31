@@ -76,7 +76,7 @@ const languageItems: {
     name: "Azure DevOps",
     component: (
       <Image
-        src="https://cdn.simpleicons.org/azuredevops/0078D4"
+        src="https://api.iconify.design/logos:azure-icon.svg"
         width={32}
         height={32}
         alt="Azure DevOps"
