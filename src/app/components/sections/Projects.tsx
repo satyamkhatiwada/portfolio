@@ -9,10 +9,10 @@ import { FaArrowDown } from "react-icons/fa6";
 export default function Projects({ onSetExperienceSection }: ProjectsProps) {
   return (
     <div
-      className="max-md:hidden max-lg:col-span-1 max-lg:row-span-1 col-span-2 row-span-6 col-start-5 bg-spotify-light-dark rounded-xl overflow-hidden flex flex-col"
+      className="max-md:hidden max-lg:col-span-1 max-lg:row-span-1 col-span-2 row-span-6 col-start-5 bg-spotify-light-dark rounded-xl overflow-hidden"
       id="projects"
     >
-      <div className="p-4 flex-shrink-0">
+      <div className="p-4">
         <div className="flex gap-3 justify-center">
           {/* Primary Button (Green) */}
           <button
@@ -40,10 +40,8 @@ export default function Projects({ onSetExperienceSection }: ProjectsProps) {
           </button>
         </div>
       </div>
-      <div className="flex-grow overflow-hidden relative">
-        <StickyScroll 
-        content={projectLists} 
-        contentClassName="h-full py-10" />
+      <div className="h-[calc(100%-80px)] overflow-hidden">
+        <StickyScroll content={projectLists} />
       </div>
     </div>
   );
