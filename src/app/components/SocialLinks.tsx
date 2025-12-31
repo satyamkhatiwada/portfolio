@@ -39,9 +39,9 @@ const socialMedias: socialMediasProps = [
     url: "https://www.linkedin.com/in/satyamkhatiwada/",
     icon: <FaLinkedin />,
   },
-  // {
-  //   title: "X",
-  //   url: "https://x.com/Satyamkhatiwada",
-  //   icon: <FaSquareXTwitter />,
-  // },
+  {
+    title: "X",
+    url: "https://x.com/Satyamkhatiwada",
+    icon: <FaSquareXTwitter />,
+  },
 ];
