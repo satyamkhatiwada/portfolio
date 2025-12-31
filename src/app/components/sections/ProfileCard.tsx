@@ -100,34 +100,24 @@ function PersonalStatement() {
         </p>
       </div>
       <h4 className="text-sm">
-        I&apos;m currently working as a AI/ML Engineer Intern at{" "}
-        <a
-          href="https://scai.engineering.asu.edu/"
-          className="text-spotify-green underline"
-        >
-          ASU SCAI
-        </a>{" "}
-        , researching on LLM ability to perform real-life business negotitation
-        tasks.
-        <br />
-        <br />
         <span>
-          I am a results-driven QA Engineer with 2+ years of experience at Qniverse Pvt. Ltd., where I rapidly grew from intern to a mid-level role by consistently delivering quality and taking ownership beyond my responsibilities. I have successfully led and managed multiple projects, conducted weekly stakeholder meetings, delivered UAT training sessions, and provided direct client support to ensure smooth releases and high satisfaction.
-<br/>
-What sets me apart is my ability to work smart and adapt fast — I actively leverage AI, automation tools such as n8n, Make.com, Power Automate, and Python to streamline processes, improve efficiency, and reduce manual effort. I am a proactive problem-solver, a collaborative team player, and a humble learner who values feedback and continuous improvement. I thrive in fast-paced environments and take pride in leading projects end-to-end while maintaining strong quality standards.
-          {/* I hope to create better{" "}
-          <span className="text-spotify-green">interactive software</span> that
-          helps people cultivate and share ideas, expressing what brings them
-          joy in meaningful ways.
-        </span>
-        <br />
-        <br />
-        <span>
-          To that end, I take a generalist’s approach, driven by a deep care for
-          both <span className="text-spotify-green">systems</span>, the
-          foundational layers of our digital world, and{" "}
-          <span className="text-spotify-green"> interaction design </span>,
-          which shapes how we live with and relate to computers around us. */}
+          I&apos;m a QA Engineer with 2+ years of experience, , starting as an{" "}
+          <span className="text-spotify-green">intern</span> and 
+          quickly growing into a{" "}  
+          <span className="text-spotify-green">mid-level</span>
+          role by consistently delivering results and taking 
+          ownership. I&apos;ve led multiple projects, worked directly with stakeholders, and 
+          supported clients to make sure releases go out smoothly.
+          
+          <br />
+          <br />
+          
+          I like working smart and adapting quickly. I use automation, AI, and{" "}
+          <span className="text-spotify-green">modern 
+          tools</span> to reduce repetitive work and improve efficiency. I also have a strong interest 
+          in cybersecurity and believe security should always be a core part of building reliable 
+          software. I enjoy fast-paced environments, learning from feedback, and continuously 
+          improving my craft.
         </span>
       </h4>
     </div>
