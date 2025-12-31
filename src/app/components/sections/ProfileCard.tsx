@@ -27,7 +27,7 @@ export default function ProfileCard() {
 
         <PersonalStatement />
         <Location />
-        <Booking />
+        {/* <Booking /> */}
       </div>
     </div>
   );
@@ -45,8 +45,8 @@ function Location() {
 }
 
 function Booking() {
-  const email = "satyamkhatiwada10@gmail.com"; // Replace with the email you want to copy
-  const phoneNum = "+9779861308915";
+  const email = ""; // Replace with the email you want to copy
+  const phoneNum = "";
 
   const handleCopyEmail = () => {
     navigator.clipboard
