@@ -26,8 +26,8 @@ export default function ProfileCard() {
         </BackgroundGradient>
 
         <PersonalStatement />
-        {/* <Location /> */}
-        {/* <Booking /> */}
+        <Location />
+        <Booking />
       </div>
     </div>
   );
@@ -38,15 +38,15 @@ function Location() {
     <div className="text-lg px-4">
       <div className="flex items-center gap-2 font-medium">
         <IoLocationOutline className="text-spotify-green text-2xl" />
-        Tempe, AZ
+        Kathmandu, Nepal
       </div>
     </div>
   );
 }
 
 function Booking() {
-  const email = ""; // Replace with the email you want to copy
-  const phoneNum = "";
+  const email = "satyamkhatiwada10@gmail.com"; // Replace with the email you want to copy
+  const phoneNum = "+9779861308915";
 
   const handleCopyEmail = () => {
     navigator.clipboard
@@ -101,7 +101,7 @@ function PersonalStatement() {
       </div>
       <h4 className="text-sm">
         <span>
-          I&apos;m a QA Engineer with 2+ years of experience, , starting as an{" "}
+          I&apos;m a QA Engineer with 2+ years of experience, starting as an{" "}
           <span className="text-spotify-green">intern</span> and 
           quickly growing into a{" "}  
           <span className="text-spotify-green">mid-level</span>
