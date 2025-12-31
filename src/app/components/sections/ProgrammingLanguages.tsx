@@ -95,17 +95,6 @@ const languageItems: {
     ),
   },
   {
-    name: "QA",
-    component: (
-      <Image
-        src="https://cdn.simpleicons.org/playwright/white"
-        width={32}
-        height={32}
-        alt="QA"
-      />
-    ),
-  },
-  {
     name: "Cloud",
     component: (
       <Image
@@ -117,24 +106,48 @@ const languageItems: {
     ),
   },
   {
-    name: "Project Management",
+    name: "MS Dynamics",
     component: (
       <Image
-        src="https://cdn.simpleicons.org/trello/white"
+        src="/dynamics365.svg" // Matches the name of your file in /public
         width={32}
         height={32}
-        alt="Project Management"
+        alt="MS Dynamics"
       />
     ),
   },
   {
-    name: "Communication",
+    name: "Salesforce",
     component: (
       <Image
-        src="https://cdn.simpleicons.org/slack/white"
+        src="https://api.iconify.design/logos:salesforce.svg" 
         width={32}
         height={32}
-        alt="Communication"
+        alt="Salesforce"
+        unoptimized
+      />
+    ),
+  },
+ {
+    name: "Excel",
+    component: (
+      <Image
+        src="/microsoft-excel.svg" // Matches the name of your file in /public
+        width={32}
+        height={32}
+        alt="Excel"
+      />
+    ),
+  },
+  {
+    name: ".NET",
+    component: (
+      <Image
+        src="https://api.iconify.design/logos:dotnet.svg"
+        width={32}
+        height={32}
+        alt=".NET"
+        unoptimized
       />
     ),
   },
