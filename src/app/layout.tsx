@@ -10,12 +10,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://luannguyen.net"),
-  title: "Luan Nguyen",
-  description: "Software Development Engineer Intern @ Amazon Web Services",
-  keywords: ["Luan Nguyen", "Software Engineer", "AI/ML", "Cloud Computing"],
-  creator: "Luan Nguyen",
-  authors: [{ name: "Luan Nguyen" }],
+  metadataBase: new URL("https://satyamkhatiwada.com.np"),
+  title: "Satyam Khatiwada",
+  description: "QA Engineer",
+  keywords: ["Satyam Khatiwada", "Satyam", "Khatiwada", "QA Engineer", "Software Engineer", "AI/ML", "Cloud Computing"],
+  creator: "Satyam Khatiwada",
+  authors: [{ name: "Satyam Khatiwada" }],
   icons: {
     icon: "/luan_aws.png",
     shortcut: "/luan_aws.png",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://luannguyen.net",
-    title: "Luan Nguyen | Software Engineer",
+    url: "https://satyamkhatiwada.com.np",
+    title: "Satyam Khatiwada | QA Engineer",
     description:
       "Full-stack software engineer specializing in web development, AI/ML, and cloud solutions.",
     siteName: "Luan Nguyen's Portfolio",
@@ -91,8 +91,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Luan Nguyen",
-              url: "https://luannguyen.net",
+              name: "Satyam Khatiwada",
+              url: "https://satyamkhatiwada.com.np",
               image: "https://luannguyen.net/luan_aws.png",
               sameAs: [
                 "https://www.linkedin.com/in/luanthiennguyen",
