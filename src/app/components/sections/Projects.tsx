@@ -43,7 +43,7 @@ export default function Projects({ onSetExperienceSection }: ProjectsProps) {
       <div className="flex-grow overflow-hidden relative">
         <StickyScroll 
         content={projectLists} 
-        containerClassName="h-full py-10" />
+        contentClassName="h-full py-10" />
       </div>
     </div>
   );
