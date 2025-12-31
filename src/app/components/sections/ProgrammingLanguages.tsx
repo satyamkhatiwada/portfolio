@@ -95,21 +95,10 @@ const languageItems: {
     ),
   },
   {
-    name: "Cloud",
-    component: (
-      <Image
-        src="https://cdn.simpleicons.org/googlecloud/white"
-        width={32}
-        height={32}
-        alt="Cloud"
-      />
-    ),
-  },
-  {
     name: "MS Dynamics",
     component: (
       <Image
-        src="/dynamics365.svg" // Matches the name of your file in /public
+        src="/dynamics.svg" // Matches the name of your file in /public
         width={32}
         height={32}
         alt="MS Dynamics"
@@ -132,7 +121,7 @@ const languageItems: {
     name: "Excel",
     component: (
       <Image
-        src="/microsoft-excel.svg" // Matches the name of your file in /public
+        src="/excel.svg" // Matches the name of your file in /public
         width={32}
         height={32}
         alt="Excel"
