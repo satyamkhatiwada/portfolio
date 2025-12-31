@@ -95,10 +95,12 @@ function PersonalStatement() {
     <div className="flex flex-col gap-3 px-4">
       <div className="space-y-1.5">
         <h1 className="text-3xl font-semibold">Satyam Khatiwada</h1>
+      </div>
+      <Location />
+      <div className="space-y-1.5">
         <p className="text-spotify-gray text-sm">
           QA Engineer • Automation Specialist • Cybersecurity Starter
         </p>
-        <Location />
       </div>
       <h4 className="text-sm">
         <span>
