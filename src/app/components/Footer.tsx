@@ -10,7 +10,7 @@ export default function Footer() {
           className="text-spotify-green font-semibold underline"
           target="_blank"
         >
-          Luan
+          Satyam
         </a>
       </p>
       <p className="text-spotify-light-gray max-md:text-sm mt-5">
