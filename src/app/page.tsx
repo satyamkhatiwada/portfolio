@@ -4,6 +4,8 @@ import { useState, useEffect, Suspense, lazy } from "react";
 import Footer from "./components/Footer";
 import Loader from "./components/ui/Loader";
 import GithubContributions from "./components/sections/GithubContributions";
+import QAStatus from "./components/sections/QAStatus";
+import dynamic from 'next/dynamic';
 
 // Lazy load components
 const ProfileCard = lazy(() => import("./components/sections/ProfileCard"));
@@ -40,14 +42,20 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  return (
+return (
     <>
       {loading ? (
         <Loader />
       ) : (
-        <main className="w-screen max-w-[1600px] mx-auto pt-6 px-32 grid grid-cols-6 grid-rows-8 max-md:gap-4 gap-4 max-lg:flex max-lg:flex-col max-md:px-2 mb-10">
-          <Suspense fallback={<Loader />}>
+        /* 1. Changed grid-rows-8 to auto-rows-min to prevent content "pushing" */
+<main className="
+  w-screen max-w-[1600px] mx-auto pt-6 px-32
+  grid grid-cols-6 gap-4
+  max-lg:flex max-lg:flex-col
+  max-md:px-2 mb-10
+">          <Suspense fallback={<Loader />}>
             <ProfileCard />
+            
             {experienceSection ? (
               <OpenedProjects
                 onSetExperienceSection={handleSetExperienceSection}
@@ -58,14 +66,26 @@ export default function Home() {
                 <ExperienceItem />
                 <Projects onSetExperienceSection={handleSetExperienceSection} />
                 <ProgrammingLanguages />
+                {/* REMOVED THE SPOTIFY/RECOMMENDATION DIV FROM HERE */}
               </>
             )}
+
+            {/* --- PASTE IT HERE (OUTSIDE THE LOGIC) --- */}
+              {/* <div className="md:col-span-4"> */}
+                {/* Pass the state so you can hide it via CSS if you really wanted to, 
+                    but simpler to just render it here to keep it visible. */}
+                <QAStatus isExploreMode={false} /> 
+              {/* </div> */}
+              {/* <div className="md:col-span-2"> */}
+                <SpotifyAlbum />
+              {/* </div> */}
+            {/* ----------------------------------------- */}
+            
+            
             <OpenedProjects className="block md:hidden" />
-            {/* <Skills /> */}
-            <GithubContributions />
-
-            <SpotifyAlbum />
-
+            {/* Spacer before footer */}
+            <div className="col-span-6 mt-10 mb-8 text-center" />       
+            
             <Footer />
           </Suspense>
         </main>

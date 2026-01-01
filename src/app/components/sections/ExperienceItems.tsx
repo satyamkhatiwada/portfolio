@@ -48,7 +48,7 @@ function Positions() {
       {experienceLists.map((position: experienceListsProps, index) => (
         <div
           className="flex items-center gap-4 p-2.5 sm:hover:bg-[#282828] rounded-lg transition-colors group"
-          key={position.companyName}
+          key={index}
         >
           <span className="text-spotify-grey sm:group-hover:text-white min-w-[20px]">
             {index + 1}

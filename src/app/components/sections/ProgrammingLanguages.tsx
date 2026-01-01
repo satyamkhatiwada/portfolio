@@ -36,6 +36,7 @@ const languageItems: {
         width={32}
         height={32}
         alt="Python"
+        unoptimized
       />
     ),
   },
@@ -47,6 +48,7 @@ const languageItems: {
         width={32}
         height={32}
         alt="n8n"
+        unoptimized
       />
     ),
   },
@@ -58,6 +60,7 @@ const languageItems: {
         width={32}
         height={32}
         alt="Make"
+        unoptimized
       />
     ),
   },
@@ -69,6 +72,7 @@ const languageItems: {
         width={32}
         height={32}
         alt="Jira"
+        unoptimized
       />
     ),
   },
@@ -80,6 +84,7 @@ const languageItems: {
         width={32}
         height={32}
         alt="Azure DevOps"
+        unoptimized
       />
     ),
   },
@@ -91,6 +96,7 @@ const languageItems: {
         width={32}
         height={32}
         alt="Cyber Security"
+        unoptimized
       />
     ),
   },
