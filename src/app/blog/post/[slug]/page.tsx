@@ -23,7 +23,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Blog Post Not Found | Luan Nguyen",
+      title: "Blog Post Not Found | Satyam Khatiwada",
       description: "The requested blog post could not be found.",
     };
   }

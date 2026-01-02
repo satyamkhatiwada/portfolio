@@ -1,117 +1,58 @@
-import { StickyScroll } from "../ui/sticky-scroll-reveal";
-import Image from "next/image";
-import Link from "next/link";
-import { ProjectsProps } from "../../page";
-import { BackgroundGradient } from "../ui/background-gradient";
 import { GrLinkNext } from "react-icons/gr";
 import { FaArrowDown } from "react-icons/fa6";
+import ProfessionalSnapshot from "./ProfessionalSnapshot";
+import CertificationsSection from "./CertificationsSection";
 
-export default function Projects({ onSetExperienceSection }: ProjectsProps) {
+export default function Projects({ onSetExperienceSection }: any) {
   return (
-    <div
-      className="max-md:hidden max-lg:col-span-1 max-lg:row-span-1 col-span-2 row-span-6 col-start-5 bg-spotify-light-dark rounded-xl overflow-hidden"
-      id="projects"
-    >
-      <div className="p-4">
-        <div className="flex gap-3 justify-center">
-          {/* Primary Button (Green) */}
-          <button
-            className="flex items-center justify-center text-sm font-bold 
-            bg-spotify-green hover:bg-spotify-dark-green hover:scale-105 
-            px-5 py-2 rounded-full gap-2 transition-all duration-200
-            min-w-[180px]"
-          >
-            Featured Projects
-            <FaArrowDown className="text-base" />
+    /* Fixed the 'h-full' issue. By using 'max-h-screen', we prevent 
+       this column from pushing your 'Recommendations' and 'Spotify' 
+       widgets down.
+    */
+    <div className="max-md:hidden col-span-2 row-span-6 col-start-5 flex flex-col gap-4 h-full max-h-[calc(100vh-3px)]" id="projects">
+      
+      {/* 1. BUTTONS HEADER - Forced to stay at the top */}
+      <div className="bg-[#121212] border border-white/5 rounded-2xl p-4 shadow-xl shrink-0 z-10">
+        <div className="flex gap-3">
+          <button className="flex-1 flex items-center justify-center text-[12px] font-bold bg-spotify-green hover:bg-[#1ed760] py-2.5 rounded-full gap-2 text-black transition-all">
+            Snapshot <FaArrowDown />
           </button>
 
-          {/* Secondary Button (White Border) */}
           <button
-            className="flex items-center justify-center text-sm font-bold 
-            border border-[#727272] hover:border-white hover:scale-105 
-            text-white px-5 py-2 rounded-full gap-2 transition-all duration-200
-            animate-pulse hover:animate-none hover:bg-white hover:text-black
-            shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_rgba(255,255,255,0.5)]
-            min-w-[180px]"
             onClick={onSetExperienceSection}
+            className="flex-1 flex items-center justify-center text-[12px] font-bold border border-[#727272] hover:border-white text-white py-2.5 rounded-full gap-2 transition-all"
           >
-            Explore All Projects
-            <GrLinkNext className="text-base" />
+            Projects <GrLinkNext />
           </button>
         </div>
       </div>
-      <div className="h-[calc(100%-80px)] overflow-hidden">
-        <StickyScroll content={projectLists} />
+
+      {/* 2. MAIN CARD - Uses flex-1 and overflow-hidden to contain the scroll */}
+      <div className="flex-1 bg-[#121212] border border-white/5 rounded-2xl p-5 flex flex-col shadow-2xl overflow-hidden min-h-0">
+        
+        {/* Professional Snapshot - shrink-0 prevents it from being squished */}
+        <div className="shrink-0 mb-6">
+          <ProfessionalSnapshot />
+        </div>
+
+        <div className="h-[1px] w-full bg-white/5 shrink-0 mb-6" />
+
+        {/* 3. SCROLL AREA CONTAINER */}
+        <div className="flex-1 flex flex-col min-h-0 overflow-hidden">
+          <h2 className="text-[11px] font-bold text-gray-500 uppercase tracking-[0.2em] mb-4 shrink-0">
+            Verified Credentials
+          </h2>
+          
+          {/* This is the magic div. 
+              'flex-1' takes up all REMAINING space.
+              'overflow-y-auto' creates the scroll.
+              'min-h-0' stops it from expanding the whole grid.
+          */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar pr-2 min-h-0">
+             <CertificationsSection />
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-
-const projectLists: {
-  title: string;
-  description: string;
-  content?: React.ReactNode | any;
-}[] = [
-  {
-    title: "Brainrot Master Vault (HackPrinceton 2025 Winner 🏆)",
-    description:
-      "BrainRot Master Vault turns short-form videos into AI-curated podcast episodes and knowledge graphs. Built at HackPrinceton 2025, it filters for quality insights using Whisper, Gemini, and Phi-3, and won Best Self-Hosted Inference.",
-    content: (
-      <a target="_blank" href="https://www.brainrotmastervaultovercooked.tech/">
-        <Image
-          src={`/gallery.jpg`}
-          alt="Brainrot Master Vault Website"
-          width={500}
-          height={500}
-        />
-      </a>
-    ),
-  },
-  {
-    title: " 📚 rateourclub.com",
-    description:
-      "rateourclub.com is a community-driven platform where students can rate and review 100+ college organizations. Built with Next.js, TailwindCSS, and Firebase, it offers a fast, responsive UI and real-time feedback system hosted on an Ubuntu server.",
-    content: (
-      <a target="_blank" href="https://rateourclub.com">
-        <Image
-          src={`/rateourclub.png`}
-          alt="rateourclub.com"
-          loading="lazy"
-          width={500}
-          height={300}
-        />
-      </a>
-    ),
-  },
-  {
-    title: "🍵 Sip n Play Café Website (Codédex Hackathon Winner)",
-    description:
-      "Sip & Play is an interactive website for a NYC board game café, featuring a 500+ game catalog and a 3D animated menu built with React, Three.js, and TailwindCSS. Designed for an immersive UX, it won Best UI/UX Design at the Codédex Hackathon.",
-    content: (
-      <a target="_blank" href="https://board-game-cafe-website.vercel.app/">
-        <Image
-          src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/codedex-hackathon.jpeg`}
-          alt="Sip n Play Cafe Website"
-          width={500}
-          height={500}
-        />
-      </a>
-    ),
-  },
-  {
-    title: "Mine Alliance ⛏️",
-    description:
-      "Mine Alliance is a platform that connects Arizona’s mining communities, corporations, and regulators through real-time data and environmental insights. Built with Next.js, Flask, and AWS, it features interactive maps and GPT-4o–powered analysis to promote sustainable mining. Winner of the Spark Challenge Hackathon.",
-    content: (
-      <a target="_blank" href="https://github.com/LuaanNguyen/epics-mern">
-        <Image
-          src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/Mine_Alliance.png`}
-          alt="Mine Alliance"
-          loading="lazy"
-          width={500}
-          height={300}
-        />
-      </a>
-    ),
-  },
-];

@@ -19,7 +19,7 @@ export const StickyScroll = ({
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
+    // target: ref,
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -40,11 +40,11 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  const backgroundColors = ["#6DC5D1", "#8CCDEB", "#90D26D", "#FDAF7B"];
-  const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+  const backgroundColors = ["#121212"]; //, "#181818", "#121212"];  
+  const linearGradients = [ "transparent",
+    // "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
+    // "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
+    // "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(
@@ -61,13 +61,13 @@ export const StickyScroll = ({
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
         opacity: "95%",
       }}
-      className="h-[40.5rem] overflow-y-auto flex justify-center relative space-x-4 rounded-md py-6 px-4"
+      className="h-[24rem] overflow-y-auto flex relative rounded-md py-6 px-4"
       ref={ref}
     >
-      <div className="div relative flex items-start">
-        <div className="max-w-xl">
+      <div className="div relative flex items-start ">
+        <div className="max-w-md">
           {content.map((item, index) => (
-            <div key={item.title + index} className="mb-20">
+            <div key={item.title + index} className="mb-20 first:mt-0">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -96,9 +96,9 @@ export const StickyScroll = ({
         </div>
       </div>
       <div
-        style={{ background: backgroundGradient }}
+        
         className={cn(
-          "hidden lg:block h-fit rounded-xl bg-white sticky top-14",
+          "hidden lg:block h-fit w-full sticky top-0 bg-transparent",
           contentClassName
         )}
       >

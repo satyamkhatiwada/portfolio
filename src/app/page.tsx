@@ -48,12 +48,7 @@ return (
         <Loader />
       ) : (
         /* 1. Changed grid-rows-8 to auto-rows-min to prevent content "pushing" */
-<main className="
-  w-screen max-w-[1600px] mx-auto pt-6 px-32
-  grid grid-cols-6 gap-4
-  max-lg:flex max-lg:flex-col
-  max-md:px-2 mb-10
-">          <Suspense fallback={<Loader />}>
+<main className="w-screen max-w-[1600px] mx-auto pt-6 px-32 grid grid-cols-6 gap-4 max-lg:flex max-lg:flex-col max-md:px-2 mb-10">          <Suspense fallback={<Loader />}>
             <ProfileCard />
             
             {experienceSection ? (
@@ -71,20 +66,22 @@ return (
             )}
 
             {/* --- PASTE IT HERE (OUTSIDE THE LOGIC) --- */}
-              {/* <div className="md:col-span-4"> */}
+            <div className="col-span-6 grid grid-cols-1 md:grid-cols-6 gap-4 items-start mt-2">
+              <div className="md:col-span-4">
                 {/* Pass the state so you can hide it via CSS if you really wanted to, 
                     but simpler to just render it here to keep it visible. */}
                 <QAStatus isExploreMode={false} /> 
-              {/* </div> */}
-              {/* <div className="md:col-span-2"> */}
+              </div>
+              <div className="md:col-span-2">
                 <SpotifyAlbum />
-              {/* </div> */}
+              </div>
+            </div>
             {/* ----------------------------------------- */}
             
             
-            <OpenedProjects className="block md:hidden" />
             {/* Spacer before footer */}
-            <div className="col-span-6 mt-10 mb-8 text-center" />       
+            <div className="col-span-6 mt-16 mb-8 text-center border-t border-white/5 pt-8" />       
+            <OpenedProjects className="block md:hidden" />
             
             <Footer />
           </Suspense>
