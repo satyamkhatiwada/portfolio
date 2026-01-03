@@ -65,8 +65,8 @@ export default function ProfessionalSnapshot() {
         <div className="flex-1">
           <p className="text-[10px] font-bold uppercase tracking-widest text-spotify-green mb-0.5">Mentorship</p>
           <p className="text-[11px] text-gray-300 italic leading-tight">
-            "Accepting students for <span className="text-white font-medium">QA Automation</span> & <span className="text-white font-medium">n8n Logic</span> training."
-          </p>
+            &quot;Accepting students for <span className="text-white font-medium">QA Automation</span> &amp; <span className="text-white font-medium">n8n Logic</span> training.&quot;
+          </p>  
         </div>
       </div>
     </div>
