@@ -9,7 +9,7 @@ export default function Projects({ onSetExperienceSection }: any) {
        this column from pushing your 'Recommendations' and 'Spotify' 
        widgets down.
     */
-    <div className="max-md:hidden col-span-2 row-span-6 col-start-5 flex flex-col gap-4 h-full max-h-[calc(100vh-3px)]" id="projects">
+    <div className="max-md:hidden col-span-2 row-span-6 col-start-5 flex flex-col gap-4 h-full max-h-[calc(100vh--30px)]" id="projects">
       
       {/* 1. BUTTONS HEADER - Forced to stay at the top */}
       <div className="bg-[#121212] border border-white/5 rounded-2xl p-4 shadow-xl shrink-0 z-10">
@@ -28,9 +28,9 @@ export default function Projects({ onSetExperienceSection }: any) {
       </div>
 
       {/* 2. MAIN CARD - Uses flex-1 and overflow-hidden to contain the scroll */}
-      <div className="flex-1 bg-[#121212] border border-white/5 rounded-2xl p-5 flex flex-col shadow-2xl overflow-hidden min-h-0">
+      <div className="flex-1 bg-[#121212] border border-white/5 rounded-2xl p-5 flex flex-col shadow-2xl overflow-hidden min-h-[600px]"> 
         
-        {/* Professional Snapshot - shrink-0 prevents it from being squished */}
+        {/* Professional Snapshot */}
         <div className="shrink-0 mb-6">
           <ProfessionalSnapshot />
         </div>
@@ -38,18 +38,15 @@ export default function Projects({ onSetExperienceSection }: any) {
         <div className="h-[1px] w-full bg-white/5 shrink-0 mb-6" />
 
         {/* 3. SCROLL AREA CONTAINER */}
-        <div className="flex-1 flex flex-col min-h-0 overflow-hidden">
+        {/* We use flex-grow here to ensure this section expands to fill the card */}
+        <div className="flex-grow flex flex-col overflow-hidden">
           <h2 className="text-[11px] font-bold text-gray-500 uppercase tracking-[0.2em] mb-4 shrink-0">
             Verified Credentials
           </h2>
           
-          {/* This is the magic div. 
-              'flex-1' takes up all REMAINING space.
-              'overflow-y-auto' creates the scroll.
-              'min-h-0' stops it from expanding the whole grid.
-          */}
-          <div className="flex-1 overflow-y-auto custom-scrollbar pr-2 min-h-0">
-             <CertificationsSection />
+          {/* The scrollable area now has a defined basis */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar pr-2">
+            <CertificationsSection />
           </div>
         </div>
       </div>

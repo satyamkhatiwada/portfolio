@@ -11,7 +11,7 @@ export default function BlogListingPage() {
     <div className="min-h-screen text-white">
       <div className="max-md:mx-4 max-md:mt-2 mx-40 mt-4">
         <BlogHeader
-          title="Writings"
+          title="Writings & Insights"
           subtitle=""
           backLink="/"
           backText="Back to Portfolio"

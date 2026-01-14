@@ -1,30 +1,23 @@
-import React from "react";
-
 export default function Footer() {
   return (
-    <div className="max-lg:col-span-1  max-lg:row-span-1 col-span-6 items-center text-center mb-10">
-      <p className="text-spotify-light-gray max-md:text-sm">
-        &copy; Satyam&apos;s Portfolio {new Date().getFullYear()}, designed by{" "}
-        <a
-          href="https://www.satyamkhatiwada.com.np/"
-          className="text-spotify-green font-semibold underline"
-          target="_blank"
-        >
-          Satyam
-        </a>
-      </p>
-      {/* <p className="text-spotify-light-gray max-md:text-sm mt-5">
-        Built with NextJS, TailwindCSS, and Aceternity UI. Check out the source
-        code{" "}
-        <a
-          target="_blank"
-          href="https://github.com/satyamkhatiwada/portfolio"
-          className="text-spotify-green font-semibold underline"
-        >
-          here
-        </a>
-        .
-      </p> */}
-    </div>
+    <footer className="w-full mt-auto pt-10 pb-10"> 
+      {/* Centered line with controlled margins */}
+      <div className="max-w-[1600px] mx-auto px-32">
+        <div className="border-t border-white/5 w-full mb-12" />
+        
+        <div className="text-center">
+          <p className="text-spotify-light-gray text-sm md:text-base opacity-70">
+            &copy; Satyam&apos;s Portfolio {new Date().getFullYear()}, designed by{" "}
+            <a
+              href="https://www.satyamkhatiwada.com.np/"
+              className="text-spotify-green font-semibold underline underline-offset-[6px] decoration-spotify-green/30 hover:decoration-spotify-green transition-all duration-300"
+              target="_blank"
+            >
+              Satyam
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 }

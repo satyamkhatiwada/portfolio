@@ -8,328 +8,80 @@ export type personalProjectType = {
   tech: string[];
 }[];
 
+
+export const getDynamicUpdatedDate = (): string => {
+  const date = new Date();
+  // Logic: Current date minus 5 days
+  const dayOfWeek = date.getDay();
+
+  date.setDate(date.getDate() - (dayOfWeek + 5));  
+
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  }).format(date);
+};
+
+
+
 export const personalProjects: personalProjectType = [
   {
-    href: "https://github.com/LuaanNguyen/AnglerSpots",
-    imageSrc: `/angler_spots.png`,
-    imageAlt: "Angler Spots 🎣",
-    title: "Angler Spots 🎣",
+    href: "https://www.fablefintech.com/",
+    imageSrc: `/remittance.jpg`,
+    imageAlt: "Global Remittance System 🌍",
+    title: "Global Remittance System 🌍",
     description:
-      "Many existing fishing apps require subscriptions or paid features. AnglerSpots is a simple, free app where people can mark their favorite fishing spots on a map, log catches, and leave useful notes for others.",
-    tech: ["Swift", "SwiftUI", "SwiftData"],
+      "Reverse-engineered an undocumented remittance system to establish complete functional and technical documentation. Defined requirements, mapped APIs and JSP workflows, and executed AI powered automated and performance testing to validate end-to-end functionality.",
+    tech: ["Document Preparation", "Client Communication", "Project Management", "Power Automate", "SQL", "Postman", "Excel"],
   },
   {
-    href: "https://github.com/LuaanNguyen/cf_ai_dns_doctor",
-    imageSrc: `/dns_doctor.png`,
-    imageAlt: "DNS Doctor 🩺",
-    title: "DNS Doctor 🩺",
+    href: "https://www.siriusapp.co.uk/apps/siriuspayroll365-hmrc-payroll-software-uk/",
+    imageSrc: `/payroll.png`,
+    imageAlt: "Payroll System 🇬🇧💷",
+    title: "UK (HMRC) Payroll System 🇬🇧💷",
     description:
-      "DNS Doctor is an diagnostic tool that helps you identify and fix DNS configuration issues for any domain. Simply paste a domain name or URL into the search box, and the application will perform a comprehensive analysis of your DNS records across multiple resolvers (Cloudflare, Google, Quad9)",
-    tech: ["Cloudflare Workers", "Workers AI", "Durable Objects", "Pages"],
+      "QA expertise and automated scripts to ensure compliance with uk rules through integration tests.",
+    tech: ["Business Central", "Excel", "AI-Powered Testing", "HMRC Compliance", "API Testing", "Automation", "UAT", ".NET"],
   },
   {
-    href: "https://openai.com/index/introducing-chatgpt-atlas/",
-    imageSrc: `/chatgpt_atlas.png`,
-    imageAlt: "ChatGPT Atlas 🖥️",
-    title: "ChatGPT Atlas 🖥️",
+    href: "https://www.microsoft.com/en-us/dynamics-365/solutions/crm",
+    imageSrc: `/crm.png`,
+    imageAlt: "D365 CRM System 🧑‍💼",
+    title: "D365 CRM System 🧑‍💼",
     description:
-      "A browser built with ChatGPT takes us closer to a true super-assistant that understands your world and helps you achieve your goals.",
-    tech: ["Product Testing", "Usability Testing"],
+      "Handled end-to-end client requirements, performed risk analysis, data migration/testing, and resolved system-level issues. Maintained consistent client communication to ensure successful delivery and alignment with business objectives.",
+    tech: ["Product Testing", "Usability Testing", "Data Migration Testing"],
   },
   {
-    href: "https://openai.com/index/introducing-chatgpt-pulse/",
-    imageSrc: `/chatgpt_pulse.png`,
-    imageAlt: "ChatGPT Pulse 📱",
-    title: "ChatGPT Pulse 📱",
+    href: "",
+    imageSrc: `/field_service.jpg`,
+    imageAlt: "D365 Field Service System 🚚",
+    title: "D365 Field Service System 🚚",
     description:
-      "Pulse is a new experience where ChatGPT proactively does research to deliver personalized updates based on your chats, feedback, and connected apps like your calendar.",
-    tech: ["Product Testing", "Usability Testing"],
+      "Performed QA and validation of the D365 Field Service system based on client requirements. Tested workflows, scheduling, and reporting features, ensuring seamless functionality across mobile and web platforms.",
+    tech: ["Usability Testing", "Mobile App Testing", "Workflow Validation"],
   },
   {
-    href: "https://github.com/LuaanNguyen/PhoenixProject",
-    imageSrc: `/phoenix_project.png`,
-    imageAlt: "Phoenix Project (HackMIT 2025) 🐦‍🔥",
-    title: "Phoenix Project (HackMIT 2025) 🐦‍🔥",
+    href: "https://github.com/satyamkhatiwada/Restaurant-Management-System-for-Enthrone-Cafe",
+    imageSrc: `/enthrone.png`,
+    imageAlt: "Restaurant Management System 🍽️",
+    title: "Restaurant Management System 🍽️",
     description:
-      "Phoenix Project is a live Arduino wildfire sensor network with real-time map, AI decisions, and analytics. Built at HackMIT 2025, it uses Keyestudio 18B20 temperature sensors deployed in multiple regions of California to detect fire spread, modeled after the Alexandridis probabilistic fire simulation.",
+      "A web app that streamlined bookings, online ordering with secure e-payments, improving service efficiency. Integrated inventory management to optimize stock levels and reduce waste.",
     tech: [
-      "Next.js",
-      "TypeScript",
-      "TailwindCSS",
-      "deck.gl",
-      "Mapbox GL",
-      "WebSockets",
-      "Arduino UNO R4 WiFi",
-      "DS18B20 (OneWire)",
-      "Python",
-      "Alexandridis Fire Model",
-      "AI Judge (EigenCloud)",
-      "Cerebras API",
-      "3D-printed Enclosure (Bambu X1C)",
+      "HTML/CSS","Laravel","PHP","MySQL","Git", "Trello"
     ],
   },
   {
-    href: "/blog/post/intern-experience-aws",
-    imageSrc: `/aws_project.png`,
-    imageAlt: "Unified Media Processing Pipeline",
-    title: "Unified Media Processing Pipeline ⚙️",
+    href: "https://github.com/satyamkhatiwada/Bislerium-Social-Media-WebAPI-",
+    imageSrc: `/fullStackBlog.png`,
+    imageAlt: "Full Stack Blog Platform 📝",
+    title: "Full Stack Blog Platform 📝",
     description:
-      "My internship project at AWS, focusing on combining to major service: decoding and shot detection, into one host. This project succeeded and served as a Proof of Concept (POC) for further optimization into the Bedrock Data Automation workflows.",
+      "A blog platform with user interactions, posting features, and admin dashboards for data visualization.",
     tech: [
-      "Java",
-      "Python",
-      "TypeScript",
-      "CDK",
-      "AWS",
-      "ECS",
-      "Fargate",
-      "Step Functions",
-      "Cloud Watch",
-      "Cloud Formation",
-      "S3",
-      "Docker",
-      "Bedrock",
+      "ReactJS", ".NET Core", "Entity Framework", "Azure DevOps", "Chakra UI", "PostGreSQL"
     ],
-  },
-  {
-    href: "https://www.linkedin.com/posts/chatgpt-for-education_today-were-introducing-study-mode-a-new-activity-7356072086492073985-AwSt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOlMkwBGudRKqJxI09d_sbxL7eqHyKnDk8",
-    imageSrc: `/openai_study_mode.jpeg`,
-    imageAlt: "ChatGPT Study Mode",
-    title: "ChatGPT Study Mode 📚",
-    description:
-      "As part of ChatGPT Lab for Education, I conducted various product and usability testing for OpenAI's unreleased features. One of them was ChatGPT's Study Mode. It is designed to help students learn with ChatGPT, not just get answers. It guides users step by step, asking thoughtful questions and adapting to each student’s goals and skill level - much like a tutor would.",
-    tech: ["Product Testing", "Usability Testing"],
-  },
-  {
-    href: "https://rateourclub.com/",
-    imageSrc: `/rateourclub.png`,
-    imageAlt: "Rate Our Club",
-    title: "Rate Our Club ⭐️",
-    description:
-      "rateourclub.com is a community-driven platform where students can rate and review 100+ college organizations. Built with Next.js, TailwindCSS, and Firebase, it offers a fast, responsive UI and real-time feedback system hosted on an Ubuntu server.",
-    tech: [
-      "NextJS",
-      "TailwindCSS",
-      "JavaScript",
-      "Firebase DB",
-      "Ubuntu Server",
-    ],
-  },
-  {
-    href: "https://www.brainrotmastervaultovercooked.tech/",
-    imageSrc: `/gallery.jpg`,
-    imageAlt: "Brainrot Master Vault",
-    title: "Brainrot Master Vault 📻 (HackPrinceton 2025 Winner 🏆)",
-    description:
-      "BrainRot Master Vault turns short-form videos into AI-curated podcast episodes and knowledge graphs. Built at HackPrinceton 2025, it filters for quality insights using Whisper, Gemini, and Phi-3, and won Best Self-Hosted Inference.",
-    tech: [
-      "OpenAI Whisper",
-      "Microsoft Phi-2",
-      "Gemini",
-      "Modal",
-      "NextJS",
-      "React Native/ Expo",
-      "Framer Motion",
-      "Kokoro",
-      "FastAPI",
-      "SQLlite",
-    ],
-  },
-  {
-    href: "https://demo.airbnb-for-stuff.pages.dev/items",
-    imageSrc: `/airbnb_for_stuff.png`,
-    imageAlt: "AirBnb For Stuff",
-    title: "AirBnb For Stuff 📦",
-    description:
-      "AirBnb For Stuff is a peer-to-peer rental platform for everyday items, built with SvelteKit, Go’s gorilla/mux, and PostgreSQL. It enables users to lend and borrow gear locally, with a full-stack setup powered by AWS RDS and deployed on Cloudflare Pages.",
-    tech: [
-      "GO + gorilla/mux",
-
-      "Svelte + SvelteKit",
-      "TailwindCSS",
-      "TypeScript",
-      "PostgresSQL",
-      "AWS RDS",
-      "CloudFare Pages",
-    ],
-  },
-  {
-    href: "https://lwm-wireless.net/",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/lwm.png`,
-    imageAlt: "Large Wireless Model",
-    title: "Large Wireless Model",
-    description:
-      "Large Wireless Model is the official documentation site for LWM—the world’s first foundational model for wireless channels. Built with React, Node.js, and MySQL, it features CI/CD via GitHub Actions, containerized with Docker, and deployed on AWS EC2 with S3 integration.",
-    tech: [
-      "ReactJS",
-      "NodeJS",
-      "Express",
-      "MySQL",
-      "AWS EC2",
-      "AWS S3",
-      "Github Actions",
-      "Docker",
-      "Webhooks",
-    ],
-  },
-  {
-    href: "https://voxel51.codestacx.com/",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/bulbasaur.png`,
-    imageAlt: "🌱 Bulbasaur",
-    title: "🌱 Bulbasaur",
-    description:
-      "Bulbasaur is an AI-driven platform for real-time wildfire detection, leveraging satellite imagery and environmental data. Built with TensorFlow, PyTorch, Flask, and React, it visualizes wildfire risks through a sleek Mapbox-powered interface.",
-    tech: [
-      "TensorFlow",
-      "PyTorch",
-      "ReactJS",
-      "Flask",
-      "Mapbox API",
-      "TailwindCSS",
-    ],
-  },
-  {
-    href: "https://github.com/LuaanNguyen/neutral-lens",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/Neutral_Lens.png`,
-    imageAlt: "Neutral Lens 🎥",
-    title: "Neutral Lens 🎥 (Social Bias Hackathon Winner 🥇)",
-    description:
-      '"Neutral-lens" is a browser extension that aims to reduce political bias in Youtube videos. This tool analyzes news content, identifying biased language and categorize it into 3 different types: Generalization, Unfairness, and Stereotypes.',
-    tech: [
-      "GUS-Net Bias Detection LLM",
-      "Google's BERT",
-      "ReactJS",
-      "TypeScript",
-      "Flask",
-      "Python",
-      "Chrome Extension",
-    ],
-  },
-  {
-    href: "https://github.com/LuaanNguyen/Mine-Alliance",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/Mine_Alliance.png`,
-    imageAlt: "Mine Alliance ⛏️",
-    title: "Mine Alliance ⛏️ (Principled Innovation Hackathon Winner 🥇)",
-    description:
-      "Mine Alliance is a platform that connects Arizona’s mining communities, corporations, and regulators through real-time data and environmental insights. Built with Next.js, Flask, and AWS, it features interactive maps and GPT-4o–powered analysis to promote sustainable mining. Winner of the Spark Challenge Hackathon.",
-
-    tech: [
-      "AWS EC2",
-      "AWS SageMaker Studio",
-      "NextJS",
-      "TypeScript",
-      "Flask",
-      "Python",
-      "SQLAlchemy",
-      "OpenAI",
-    ],
-  },
-  {
-    href: "https://github.com/LuaanNguyen/static-site-generator",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/staticsitegenerator_infrastructure.jpg`,
-    imageAlt: "Static Site Generator",
-    title: "Static Site Generator ♺",
-    description:
-      "Static Site Generator is a Python-based tool that converts raw content—like Markdown and images—into fully rendered static websites using HTML and CSS. Designed with object-oriented principles for easy extensibility.",
-    tech: ["Python", "OOP", "HTML/CSS"],
-  },
-  {
-    href: "https://github.com/LuaanNguyen/asteroids",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/asteroids.png`,
-    imageAlt: "Asteroids Game",
-    title: "Asteroids Game ☄️",
-    description:
-      "Asteroids Game is a simplified remake of the classic arcade game, built using Pygame to strengthen object-oriented programming concepts. It marked my first hands-on experience with game development in Python.",
-    tech: ["Pygame", "Python", "OOP"],
-  },
-  {
-    href: "https://thesoda.io/",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/thesodaio.png`,
-    imageAlt: "Thesoda.io",
-    title: "The Software Developers Association (SoDA) Website 🥤",
-    description:
-      "thesoda.io is the official site for the Software Developers Association at ASU. Collaborated with 8 technical officers to revamp the site, build a Flask backend for a points system, integrate Discord bots, and optimize SEO. Powered by React, TailwindCSS, and Digital Ocean.",
-    tech: [
-      "ReactJS",
-      "Flask",
-      "Digital Ocean",
-      "Netlify",
-      "AceternityUI",
-      "TailwindCSS",
-      "TypeScript",
-      "Python",
-      "SEO",
-    ],
-  },
-  {
-    href: "https://www.luannguyen.net/",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/luan-portfolio.jpg`,
-    imageAlt: "My Portfolio",
-    title: "Personal Portfolio 🪪",
-    description:
-      "This is a Spotify-inspired site I built in under 24 hours to showcase my work and identity. Built with Next.js, TailwindCSS, and TypeScript, it's deployed with AWS S3 + CloudFront and features Vercel Analytics for insights.",
-    tech: [
-      "NEXTJS",
-      "AceternityUI",
-      "TailwindCSS",
-      "TypeScript",
-      "Vercel Analytics",
-      "AWS S3 + CloudFront",
-    ],
-  },
-  {
-    href: "https://board-game-cafe-website.vercel.app/",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/sipnplay.png`,
-    imageAlt: "Sip n Play Cafe Website",
-    title:
-      "Sip n Play Boardgame Café Website ☕️ (Codédex Hackathon 2024 Winner 🥇)",
-    description:
-      "Sip & Play is an interactive website for a NYC board game café, featuring a 500+ game catalog and a 3D animated menu built with React, Three.js, and TailwindCSS. Designed for an immersive UX, it won Best UI/UX Design at the Codédex Hackathon.",
-    tech: ["React", "ThreeJS", "TailwindCSS", "JavaScript"],
-  },
-  {
-    href: "https://github.com/Smit2553/Fiber",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/fiber.png`,
-    imageAlt: "Fiber Project",
-    title: "🥑 Fiber (CalHacks 2024)",
-    description:
-      "An AI-powered mobile application to scan the barcodes of groceries, providing comprehensive nutritional value, additives, and organic dimension for the users. This allows users to easily identify healthier options while grocery shopping.",
-    tech: ["React Native", "Expo", "Python", "Flask", "OpenAI"],
-  },
-  {
-    href: "https://ethicalspectacle.com/",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/ethicalspectacle.png`,
-    imageAlt: "Ethical Spectable Research Website",
-    title: "Ethical Spectable Research Website 💻",
-    description:
-      "Ethical Spectacle Research Website is the official site for our research company, highlighting ongoing projects, publications, and member leaderboards. Built with Next.js, Flask, and MySQL, it serves as a hub for showcasing our AI-driven initiatives.",
-    tech: ["NEXTJS", "JavaScript", "Python", "Flask", "MySQL", "TailwindCSS"],
-  },
-  {
-    href: "https://www.unionize101.org",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/unionize101.png`,
-    imageAlt: "unionize101.org ",
-    title: "unionize101.org 💻",
-    description:
-      "unionize101.org is an educational platform designed to guide workers and union leaders through the process of starting a union. Built by a team of 6 interns during my time at Pinear LLC, the site combines Next.js, GhostCMS, and Docker to deliver a polished, SEO-optimized experience.",
-    tech: [
-      "NEXTJS",
-      "TypeScript",
-      "GhostCMS",
-      "Docker",
-      "Figma",
-      "TailwindCSS",
-      "Google Analytics",
-      "SEO",
-    ],
-  },
-  {
-    href: "https://github.com/LuaanNguyen/HelpSystem",
-    imageSrc: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/helpsystem.jpg`,
-    imageAlt: "Help System 📚",
-    title: "Help System 📚",
-    description:
-      "Help System is a Java-based desktop application designed to provide personalized academic support to over 200 ASU students. Led a team of 5 to build the system using JavaFX, H2 Database, and Maven, with a Figma-driven UI design.",
-    tech: ["Java", "JavaFX", "Maven", "H2 Database", "Figma"],
   },
 ];

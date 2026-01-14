@@ -16,7 +16,7 @@ export default function ProfileCard() {
       <div className="flex flex-col gap-7 max-md:gap-5">
         <BackgroundGradient containerClassName="rounded-[40px] place-self-center">
           <Image
-            src="/sat1.jpeg"
+            src="/profile.jpg"
             alt="Satyam Khatiwada"
             width={400}
             height={400}

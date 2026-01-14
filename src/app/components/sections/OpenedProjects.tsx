@@ -3,12 +3,12 @@ import { ProjectsProps } from "../../page";
 import { CiGlobe } from "react-icons/ci";
 import Image from "next/image";
 import {
-  personalProjects,
-  type personalProjectType,
+  personalProjects, 
+  type personalProjectType, getDynamicUpdatedDate
 } from "../../../../data/projects";
 import Link from "next/link";
 import { IoPlayCircle } from "react-icons/io5"; // Import play icon
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FiChevronDown } from "react-icons/fi";
 
 type ExperienceItemProps = {
@@ -22,6 +22,11 @@ export default function OpenedExperienceItem({
   className,
 }: ProjectsPropsWithClassName) {
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
+
+  const [lastUpdate, setLastUpdate] = useState<string>("");
+  useEffect(() => {
+    setLastUpdate(getDynamicUpdatedDate());
+  }, []);
   return (
     <div
       id="project"
@@ -33,8 +38,7 @@ export default function OpenedExperienceItem({
             <h2 className="text-2xl font-bold">Projects</h2>
             <p className="flex items-center text-spotify-grey text-sm gap-1.5">
               <CiGlobe className="text-xl text-spotify-white" />
-              {personalProjects.length} completed projects • Updated December
-              15, 2025
+              {personalProjects.length} completed projects • Updated {lastUpdate || "Recently"}
             </p>
           </div>
 

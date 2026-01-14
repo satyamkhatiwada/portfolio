@@ -6,28 +6,19 @@ type experienceListsProps = {
 
 const experienceLists: experienceListsProps[] = [
   {
-    companyName: "Amazon Web Services",
-    positionTitle: "Software Development Engineer Intern",
-    date: "May 2025 - August 2025",
+    companyName: "Self Projects / Freelance",
+    positionTitle: "QA Engineer / Tester",
+    date: "2024 - Present",
   },
   {
-    companyName: "Autodesk",
-    positionTitle: "Design & Make Ambassador",
-    date: "March 2025 - Present",
+    companyName: "Qniverse Pvt. Ltd.",
+    positionTitle: "QA Engineer ",
+    date: "2023 - 2025",
   },
   {
-    companyName: "Simplify (YC W21)",
-    positionTitle: "Campus Ambassador",
-    date: "January 2025 - Present",
-  },
-  {
-    companyName: "Wireless Intelligence Lab — ASU ECEE",
-    positionTitle: "Software Engineer",
-    date: "September 2024 - Present",
-  },
-  {
-    companyName: "ASU Enterprise Technology",
-    positionTitle: "Technology Consultant",
-    date: "May 2024 – August 2024",
+    companyName: "Academic / Training Experience",
+    positionTitle: "Python, QA & Software Fundamentals",
+    date: "2020 - Present",
   },
 ];
+

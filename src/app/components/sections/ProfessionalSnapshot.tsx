@@ -28,7 +28,7 @@ export default function ProfessionalSnapshot() {
       <div className="grid grid-cols-2 gap-3">
         {/* Email Button */}
         <button 
-          onClick={() => handleCopy("satyam@example.com", "email")}
+          onClick={() => handleCopy("satyamkhatiwada10@gmail.com", "email")}
           className={`flex items-center justify-center gap-2 p-3 rounded-xl border transition-all ${
             copiedLabel === "email" 
               ? "bg-spotify-green/10 border-spotify-green/50 text-white" 
@@ -37,13 +37,13 @@ export default function ProfessionalSnapshot() {
         >
           {copiedLabel === "email" ? <FiCheck className="text-spotify-green" /> : <FiMail />}
           <span className="text-[11px] font-bold uppercase tracking-wide">
-            {copiedLabel === "email" ? "Copied!" : "Copy Email"}
+            {copiedLabel === "email" ? "Copied!" : "Email"}
           </span>
         </button>
 
         {/* WhatsApp Button */}
         <button 
-          onClick={() => handleCopy("+977 98XXXXXXXX", "wa")}
+          onClick={() => handleCopy("+977 9861308915", "wa")}
           className={`flex items-center justify-center gap-2 p-3 rounded-xl border transition-all ${
             copiedLabel === "wa" 
               ? "bg-spotify-green/10 border-spotify-green/50 text-white" 

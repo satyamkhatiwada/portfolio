@@ -1,5 +1,4 @@
 import React from "react";
-import { FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";
 import Footer from "../../../components/Footer";
 import { notFound } from "next/navigation";
@@ -14,7 +13,8 @@ interface BlogPostPageProps {
   }>;
 }
 
-// Generate dynamic metadata for each blog post
+/* ---------------- DYNAMIC SEO METADATA ---------------- */
+
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
@@ -28,103 +28,91 @@ export async function generateMetadata({
     };
   }
 
-  // Create a clean excerpt from description or content preview
   const excerpt =
     post.description ||
-    post.content.replace(/<[^>]*>/g, "").substring(0, 160) + "...";
+    post.content.replace(/<[^>]*>/g, "").slice(0, 160) + "...";
 
-  // Extract keywords from title and content
-  const titleWords = post.title.split(" ").filter((word) => word.length > 3);
-  const contentKeywords = [
-    "AWS",
-    "Software Engineering",
-    "Internship",
-    "Technology",
-    "Programming",
-  ];
+  const titleKeywords = post.title
+    .split(" ")
+    .filter((word) => word.length > 3);
 
   return {
-    title: `${post.title} | Luan Nguyen`,
+    title: `${post.title} | Satyam Khatiwada`,
     description: excerpt,
-    keywords: [
-      "Luan Nguyen",
-      "Software Engineer",
-      "Blog",
-      "AWS",
-      "Technology",
-      ...titleWords,
-      ...contentKeywords,
-    ],
-    authors: [{ name: "Luan Nguyen", url: "https://luannguyen.net" }],
-    creator: "Luan Nguyen",
-    publisher: "Luan Nguyen",
 
-    // Open Graph metadata for social sharing
+    keywords: [
+      "Satyam Khatiwada",
+      "QA Engineer",
+      "Software Testing",
+      "Quality Assurance",
+      "Tech Blog",
+      "Software Engineering",
+      "Career",
+      ...titleKeywords,
+    ],
+
+    authors: [
+      {
+        name: "Satyam Khatiwada",
+        url: "https://satyamkhatiwada.com.np",
+      },
+    ],
+
+    creator: "Satyam Khatiwada",
+    publisher: "Satyam Khatiwada",
+
     openGraph: {
       type: "article",
       locale: "en_US",
-      url: `/blog/post/${post.slug}`,
+      url: `https://satyamkhatiwada.com.np/blog/post/${post.slug}`,
       title: post.title,
       description: excerpt,
-      siteName: "Luan Nguyen's Portfolio",
+      siteName: "Satyam Khatiwada — Writings",
       images: [
         {
           url: post.image,
           width: 1200,
           height: 630,
           alt: post.title,
-          type: "image/jpeg",
         },
       ],
-      authors: ["Luan Nguyen"],
+      authors: ["Satyam Khatiwada"],
       publishedTime: new Date(post.date).toISOString(),
-      tags: [
+      tags: post.tags ?? [
         "Technology",
-        "Programming",
-        "AWS",
-        "Software Engineering",
+        "Quality Assurance",
+        "Software",
         "Career",
       ],
     },
 
-    // Twitter Card metadata
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: excerpt,
       images: [post.image],
-      creator: "@luannguyen", // Replace with your actual Twitter handle
-      site: "@luannguyen", // Replace with your site's Twitter handle
+      creator: "@satyamkhatiwada", // change if you have one
     },
 
-    // Additional metadata
     robots: {
       index: true,
       follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
     },
 
-    // Canonical URL
     alternates: {
-      canonical: `/blog/post/${post.slug}`,
+      canonical: `https://satyamkhatiwada.com.np/blog/post/${post.slug}`,
     },
 
-    // Article-specific metadata
     other: {
-      "article:author": "Luan Nguyen",
+      "article:author": "Satyam Khatiwada",
       "article:published_time": new Date(post.date).toISOString(),
       "article:modified_time": new Date().toISOString(),
       "article:section": "Technology",
-      "article:tag": "Software Engineering, AWS, Internship, Technology",
     },
   };
 }
+
+/* ---------------- PAGE ---------------- */
 
 export default async function IndividualBlogPostPage({
   params,
@@ -132,16 +120,14 @@ export default async function IndividualBlogPostPage({
   const { slug } = await params;
   const post = await getPostData(slug);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
   return (
     <div className="min-h-screen text-white">
-      <div className="max-md:mx-4 max-md:mt-2 mx-40 mt-4">
-        <BlogHeader title="" backLink="/blog" backText="Back to Writings" />
+      <div className="mx-auto max-w-[1200px] px-6 mt-6">
+        <BlogHeader backLink="/blog" backText="Back to Writings" />
         <BlogPostContent post={post} />
-        <div className="mt-16">
+        <div className="mt-20">
           <Footer />
         </div>
       </div>
@@ -149,8 +135,8 @@ export default async function IndividualBlogPostPage({
   );
 }
 
-// Generate static params for known blog posts
+/* ---------------- STATIC PARAMS ---------------- */
+
 export async function generateStaticParams() {
-  const slugs = getAllPostSlugs();
-  return slugs;
+  return getAllPostSlugs();
 }

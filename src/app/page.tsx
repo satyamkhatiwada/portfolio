@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, Suspense, lazy } from "react";
-import Footer from "./components/Footer";
 import Loader from "./components/ui/Loader";
 import GithubContributions from "./components/sections/GithubContributions";
 import QAStatus from "./components/sections/QAStatus";
@@ -44,11 +43,12 @@ export default function Home() {
 
 return (
     <>
-      {loading ? (
+      {loading ? (  
         <Loader />
       ) : (
         /* 1. Changed grid-rows-8 to auto-rows-min to prevent content "pushing" */
-<main className="w-screen max-w-[1600px] mx-auto pt-6 px-32 grid grid-cols-6 gap-4 max-lg:flex max-lg:flex-col max-md:px-2 mb-10">          <Suspense fallback={<Loader />}>
+        <main className="w-screen max-w-[1600px] mx-auto pt-6 px-32 grid grid-cols-6 auto-rows-min max-md:gap-4 gap-4 max-lg:flex max-lg:flex-col max-md:px-2 mb-10">
+          <Suspense fallback={<Loader />}>
             <ProfileCard />
             
             {experienceSection ? (
@@ -80,10 +80,9 @@ return (
             
             
             {/* Spacer before footer */}
-            <div className="col-span-6 mt-16 mb-8 text-center border-t border-white/5 pt-8" />       
+            {/* <div className="col-span-6 mt-16 text-center border-t border-white/5 pt-0" />        */}
             <OpenedProjects className="block md:hidden" />
             
-            <Footer />
           </Suspense>
         </main>
       )}

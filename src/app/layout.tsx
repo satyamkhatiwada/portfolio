@@ -6,48 +6,71 @@ import Navigation from "./components/Navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { GeneralProvider } from "./contexts/generalContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://satyamkhatiwada.com.np"),
-  title: "Satyam Khatiwada",
-  description: "QA Engineer",
-  keywords: ["Satyam Khatiwada", "Satyam", "Khatiwada", "QA Engineer", "Software Engineer", "AI/ML", "Cloud Computing"],
+
+  title: {
+    default: "Satyam Khatiwada",
+    template: "%s | Satyam Khatiwada",
+  },
+
+  description:
+    "QA Engineer and software enthusiast exploring quality engineering, modern web technologies, and thoughtful digital experiences.",
+
+  keywords: [
+    "Satyam Khatiwada",
+    "QA Engineer",
+    "Quality Assurance",
+    "Software Testing",
+    "Automation Testing",
+    "Frontend Development",
+    "Web Development",
+    "Tech Blog",
+    "Personal Portfolio",
+  ],
+
   creator: "Satyam Khatiwada",
   authors: [{ name: "Satyam Khatiwada" }],
+
   icons: {
-    icon: "/luan_aws.png",
-    shortcut: "/luan_aws.png",
+    icon: "/satyam_title.png",
+    shortcut: "/satyam_title.png",
     apple: [
-      { url: "/luan_aws.png" },
-      { url: "/luan_aws.png", sizes: "180x180", type: "image/svg+xml" },
+      { url: "/satyam_title.png" },
+      { url: "/satyam_title.png", sizes: "180x180", type: "image/svg+xml" },
     ],
   },
+
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://satyamkhatiwada.com.np",
-    title: "Satyam Khatiwada | QA Engineer",
+    title: "Satyam Khatiwada | QA Engineer & Software Enthusiast",
     description:
-      "Full-stack software engineer specializing in web development, AI/ML, and cloud solutions.",
-    siteName: "Luan Nguyen's Portfolio",
+      "Spotify-inspired personal portfolio and blog sharing projects, QA insights, and lessons from building reliable software.",
+    siteName: "Satyam Khatiwada",
     images: [
       {
-        url: `/luan_aws.png`,
+        url: `/satyam_title.png`,
         width: 1200,
         height: 630,
-        alt: "Luan Nguyen Portfolio",
+        alt: "Satyam Khatiwada Portfolio",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Luan Nguyen | Software Engineer",
+    title: "Satyam Khatiwada | QA Engineer",
     description:
-      "Full-stack software engineer specializing in web development, AI/ML, and cloud solutions.",
-    images: [`/luan_aws.png`],
+      "Personal portfolio and blog focused on quality engineering, testing, and modern web development.",
+    images: [`/satyam_title.png`],
   },
+
   robots: {
     index: true,
     follow: true,
@@ -59,6 +82,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
   verification: {
     google: "",
   },
@@ -84,7 +108,8 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-        {/* Structured data for rich Google search results */}
+
+        {/* Structured data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -93,26 +118,32 @@ export default function RootLayout({
               "@type": "Person",
               name: "Satyam Khatiwada",
               url: "https://satyamkhatiwada.com.np",
-              image: "https://luannguyen.net/luan_aws.png",
+              image: "https://satyamkhatiwada.com.np/satyam_title.png",
               sameAs: [
-                "https://www.linkedin.com/in/luanthiennguyen",
-                "https://github.com/LuaanNguyen",
+                "https://www.linkedin.com/in/satyam-khatiwada",
+                "https://github.com/satyamkhatiwada",
               ],
-              jobTitle: "Software Engineer",
-              worksFor: {
-                "@type": "Organization",
-                name: "AWS",
-              },
+              jobTitle: "QA Engineer",
               description:
-                "Full-stack software engineer at AWS, passionate about web development, AI/ML, and cloud solutions.",
+                "QA Engineer passionate about building reliable software, improving user experience, and sharing knowledge through writing.",
             }),
           }}
         />
       </head>
-      <body className={inter.className} suppressHydrationWarning>
+
+    <body className={`${inter.className} min-h-screen flex flex-col bg-[#121212] text-white`} suppressHydrationWarning>
         <GeneralProvider>
           <Navigation />
-          {children}
+          
+          {/* 2. ADDED THE MAIN TAG WITH FLEX-GROW */}
+          {/* This pushes the footer down to the very bottom */}
+          <main className="flex-grow">
+            {children}
+          </main>
+
+          {/* 3. ADDED THE FOOTER HERE */}
+          <Footer />
+          
           <Analytics />
         </GeneralProvider>
         <SpeedInsights />

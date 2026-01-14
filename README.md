@@ -1,32 +1,37 @@
-# Personal Portfolio 🪴
+# Satyam Khatiwada — Personal Portfolio 🎧
 
-> Demo: [luannguyen.net](https://www.luannguyen.net)
+A modern, responsive **Spotify-inspired developer portfolio** showcasing my work, projects, and writing.
 
-<img src="public/portfolio_highres.png" width="700"  alt="Portfolio Preview">
-
-A modern, responsive portfolio website featuring a design, inspired by Spotify.
-
-This website is powered by [Next.js 15](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [Aceternity UI](https://ui.aceternity.com/). To develop, run:
-
-```bash
-$ git clone https://github.com/LuaanNguyen/portfolio.git
-$ npm install
-$ npm run dev
-```
-
-To run with Docker:
-
-```bash
-$ docker build -t luan/portfolio .
-$ docker run --rm -p 3000:3000 luan/portfolio
-```
-
-With hot reload:
-
-```bash
-$ docker compose -f docker-compose.dev.yml up
-```
+This portfolio is designed to feel immersive, minimal, and content-focused — encouraging visitors to **explore, read, and stay longer**.
 
 ---
 
-Made with ❤️ by [Luan Nguyen](https://www.linkedin.com/in/luaanng/)
+## ✨ Features
+
+- Spotify-inspired dark UI
+- Bento-style layout
+- Smooth animations with Framer Motion
+- Blog system powered by Markdown
+- Fully responsive & performance-optimized
+- Built with accessibility and readability in mind
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js 15**
+- **React 18**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Three.js**
+- **Markdown (Gray-Matter + Remark)**
+
+---
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
