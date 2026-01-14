@@ -17,7 +17,6 @@ export default function BlogListingPage() {
           backText="Back to Portfolio"
         />
         <BlogPostList posts={blogPosts} />
-        <Footer />
       </div>
     </div>
   );

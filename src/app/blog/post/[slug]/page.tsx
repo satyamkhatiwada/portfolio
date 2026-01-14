@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Footer from "../../../components/Footer";
 import { notFound } from "next/navigation";
 import { getPostData, getAllPostSlugs } from "../../../../lib/blog";
 import BlogHeader from "../../../components/blog/BlogHeader";
@@ -36,6 +35,14 @@ export async function generateMetadata({
     .split(" ")
     .filter((word) => word.length > 3);
 
+  // Safely handle tags to fix the Vercel Type Error
+  const postTags = (post as any).tags ?? [
+    "Technology",
+    "Quality Assurance",
+    "Software",
+    "Career",
+  ];
+
   return {
     title: `${post.title} | Satyam Khatiwada`,
     description: excerpt,
@@ -46,18 +53,11 @@ export async function generateMetadata({
       "Software Testing",
       "Quality Assurance",
       "Tech Blog",
-      "Software Engineering",
-      "Career",
       ...titleKeywords,
+      ...postTags,
     ],
 
-    authors: [
-      {
-        name: "Satyam Khatiwada",
-        url: "https://satyamkhatiwada.com.np",
-      },
-    ],
-
+    authors: [{ name: "Satyam Khatiwada", url: "https://satyamkhatiwada.com.np" }],
     creator: "Satyam Khatiwada",
     publisher: "Satyam Khatiwada",
 
@@ -78,12 +78,7 @@ export async function generateMetadata({
       ],
       authors: ["Satyam Khatiwada"],
       publishedTime: new Date(post.date).toISOString(),
-      tags: post.tags ?? [
-        "Technology",
-        "Quality Assurance",
-        "Software",
-        "Career",
-      ],
+      tags: postTags,
     },
 
     twitter: {
@@ -91,23 +86,10 @@ export async function generateMetadata({
       title: post.title,
       description: excerpt,
       images: [post.image],
-      creator: "@satyamkhatiwada", // change if you have one
-    },
-
-    robots: {
-      index: true,
-      follow: true,
     },
 
     alternates: {
       canonical: `https://satyamkhatiwada.com.np/blog/post/${post.slug}`,
-    },
-
-    other: {
-      "article:author": "Satyam Khatiwada",
-      "article:published_time": new Date(post.date).toISOString(),
-      "article:modified_time": new Date().toISOString(),
-      "article:section": "Technology",
     },
   };
 }
@@ -122,20 +104,42 @@ export default async function IndividualBlogPostPage({
 
   if (!post) notFound();
 
+  // SEO: Structured Data (JSON-LD) for Google "Article" rich snippets
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "image": post.image,
+    "datePublished": new Date(post.date).toISOString(),
+    "author": [{
+      "@type": "Person",
+      "name": "Satyam Khatiwada",
+      "url": "https://satyamkhatiwada.com.np"
+    }],
+    "description": post.description || "",
+  };
+
   return (
     <div className="min-h-screen text-white">
+      {/* Injecting Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
       <div className="mx-auto max-w-[1200px] px-6 mt-6">
-        <BlogHeader backLink="/blog" backText="Back to Writings" />
-        <BlogPostContent post={post} />
-        <div className="mt-20">
-          <Footer />
-        </div>
+      <BlogHeader 
+        backLink="/blog" 
+        backText="Back to Writings" 
+        title={post.title} // 👈 This satisfies the 'BlogHeaderProps' requirement
+      />        
+        <main id="main-content"> {/* Accessibility: Use main tag */}
+          <BlogPostContent post={post} />
+        </main>
       </div>
     </div>
   );
 }
-
-/* ---------------- STATIC PARAMS ---------------- */
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
