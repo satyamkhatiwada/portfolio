@@ -63,10 +63,15 @@ export default function ProfessionalSnapshot() {
           <FiBookOpen size={16} />
         </div>
         <div className="flex-1">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-spotify-green mb-0.5">Mentorship</p>
-          <p className="text-[11px] text-gray-300 italic leading-tight">
-            &quot;Accepting students for <span className="text-white font-medium">QA Automation</span> &amp; <span className="text-white font-medium">n8n Logic</span> training.&quot;
-          </p>  
+          <p className="text-[10px] font-bold uppercase tracking-widest text-spotify-green mb-0.5">
+            Mentorship
+          </p>
+          <p className="text-[11px] text-gray-300 leading-tight">
+            Open to sharing experience and direction.
+          </p>
+          <p className="text-[10px] text-gray-400 mt-0.5">
+            Email or WhatsApp works.
+          </p>
         </div>
       </div>
     </div>

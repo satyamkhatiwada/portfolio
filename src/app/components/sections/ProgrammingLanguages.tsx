@@ -9,13 +9,17 @@ export default function ProgrammingLanguages() {
     >
       <div className="p-6">
         <h1 className="text-xl font-bold mb-5">Skills</h1>
+
         <div className="grid grid-cols-5 max-xl:grid-cols-4 max-lg:grid-cols-5 max-md:grid-cols-4 max-sm:grid-cols-3 gap-4">
           {languageItems.map((item) => (
             <div
-              className="flex items-center justify-center p-2.5 rounded-lg sm:hover:bg-[#282828] transition-all duration-200"
               key={item.name}
+              className="flex flex-col items-center justify-center gap-2 p-2.5 rounded-lg"
             >
               {item.component}
+              <span className="text-[11px] text-neutral-400 text-center leading-none">
+                {item.name}
+              </span>
             </div>
           ))}
         </div>
@@ -31,121 +35,61 @@ const languageItems: {
   {
     name: "Python",
     component: (
-      <Image
-        src="https://cdn.simpleicons.org/python/3776AB"
-        width={32}
-        height={32}
-        alt="Python"
-        unoptimized
-      />
+      <Image src="https://cdn.simpleicons.org/python/3776AB" width={32} height={32} alt="Python" unoptimized />
     ),
   },
   {
     name: "n8n",
     component: (
-      <Image
-        src="https://cdn.simpleicons.org/n8n/white"
-        width={32}
-        height={32}
-        alt="n8n"
-        unoptimized
-      />
+      <Image src="https://cdn.simpleicons.org/n8n/white" width={32} height={32} alt="n8n" unoptimized />
     ),
   },
   {
     name: "Make",
     component: (
-      <Image
-        src="https://cdn.simpleicons.org/make/white"
-        width={32}
-        height={32}
-        alt="Make"
-        unoptimized
-      />
+      <Image src="https://cdn.simpleicons.org/make/white" width={32} height={32} alt="Make" unoptimized />
     ),
   },
   {
     name: "Jira",
     component: (
-      <Image
-        src="https://cdn.simpleicons.org/jira/0052CC"
-        width={32}
-        height={32}
-        alt="Jira"
-        unoptimized
-      />
+      <Image src="https://cdn.simpleicons.org/jira/0052CC" width={32} height={32} alt="Jira" unoptimized />
     ),
   },
   {
     name: "Azure DevOps",
     component: (
-      <Image
-        src="https://api.iconify.design/logos:azure-icon.svg"
-        width={32}
-        height={32}
-        alt="Azure DevOps"
-        unoptimized
-      />
+      <Image src="https://api.iconify.design/logos:azure-icon.svg" width={32} height={32} alt="Azure DevOps" unoptimized />
     ),
   },
   {
     name: "Cyber Security",
     component: (
-      <Image
-        src="https://cdn.simpleicons.org/auth0/white"
-        width={32}
-        height={32}
-        alt="Cyber Security"
-        unoptimized
-      />
+      <Image src="https://cdn.simpleicons.org/auth0/white" width={32} height={32} alt="Cyber Security" unoptimized />
     ),
   },
   {
     name: "MS Dynamics",
     component: (
-      <Image
-        src="/dynamics.svg" // Matches the name of your file in /public
-        width={32}
-        height={32}
-        alt="MS Dynamics"
-        className="brightness-110 saturate-125"
-      />
+      <Image src="/dynamics.svg" width={32} height={32} alt="MS Dynamics" />
     ),
   },
   {
     name: "Salesforce",
     component: (
-      <Image
-        src="https://api.iconify.design/logos:salesforce.svg" 
-        width={32}
-        height={32}
-        alt="Salesforce"
-        unoptimized
-      />
+      <Image src="https://api.iconify.design/logos:salesforce.svg" width={32} height={32} alt="Salesforce" unoptimized />
     ),
   },
- {
+  {
     name: "Excel",
     component: (
-      <Image
-        src="/excel.svg" // Matches the name of your file in /public
-        width={32}
-        height={32}
-        alt="Excel"
-        className="brightness-125 saturate-150"
-      />
+      <Image src="/excel.svg" width={32} height={32} alt="Excel" />
     ),
   },
   {
     name: ".NET",
     component: (
-      <Image
-        src="https://api.iconify.design/logos:dotnet.svg"
-        width={32}
-        height={32}
-        alt=".NET"
-        unoptimized
-      />
+      <Image src="https://api.iconify.design/logos:dotnet.svg" width={32} height={32} alt=".NET" unoptimized />
     ),
   },
 ];
