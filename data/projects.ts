@@ -54,7 +54,7 @@ export const personalProjects: personalProjectType = [
     tech: ["Product Testing", "Usability Testing", "Data Migration Testing"],
   },
   {
-    href: "",
+    href: "https://www.microsoft.com/en-us/dynamics-365/products/field-service",
     imageSrc: `/field_service.jpg`,
     imageAlt: "D365 Field Service System 🚚",
     title: "D365 Field Service System 🚚",
