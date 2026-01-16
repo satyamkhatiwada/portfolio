@@ -21,13 +21,17 @@ export default function MobileNav({ handleMobile }: MobileNavProps) {
       href: isOnBlogPage ? "/#experience" : "#experience",
     },
     {
-      section: "Programming Languages",
+      section: "Skills",
       href: isOnBlogPage ? "/#programming-languages" : "#programming-languages",
     },
     { section: "Projects", href: isOnBlogPage ? "/#project" : "#project" },
     {
-      section: "Contributions",
-      href: isOnBlogPage ? "/#contribution" : "#contribution",
+      section: "Recommendations",
+      href: isOnBlogPage ? "/#QAStatus" : "#Recommendations",
+    },
+    {
+      section: "Snapshot",
+      href: isOnBlogPage ? "/#ProfessionalSnapshot" : "#snapshot",
     },
   ];
 

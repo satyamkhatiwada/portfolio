@@ -3,7 +3,7 @@ import React from 'react';
 export default function QAStatus({ isExploreMode }: { isExploreMode: boolean }) {
   return (
     
-<div className="col-span-4 row-span-1 bg-[#121212] rounded-xl border border-white/5 flex flex-col h-[152px] overflow-hidden">
+<div className="col-span-4 row-span-1 bg-[#121212] rounded-xl border border-white/5 flex flex-col h-[152px] overflow-hidden" id= "Recommendations">
       <div className="px-6 pt-4 pb-2 flex justify-between items-center">
         <h2 className="text-xl font-bold text-white tracking-tight">Recommendations</h2>
         <a href="https://linkedin.com" target="_blank" className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">LinkedIn →</a>

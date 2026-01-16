@@ -9,18 +9,21 @@ export default function Projects({ onSetExperienceSection }: any) {
        this column from pushing your 'Recommendations' and 'Spotify' 
        widgets down.
     */
-    <div className="max-md:hidden col-span-2 row-span-6 col-start-5 flex flex-col gap-4 h-full max-h-[calc(100vh--30px)]" id="projects">
+    <div className="col-span-2 row-span-6 col-start-5 flex flex-col gap-4 h-full max-h-[calc(100vh--30px)] scroll-mt-24" id="projects">
       
       {/* 1. BUTTONS HEADER - Forced to stay at the top */}
       <div className="bg-[#121212] border border-white/5 rounded-2xl p-4 shadow-xl shrink-0 z-10">
         <div className="flex gap-3">
-          <button className="flex-1 flex items-center justify-center text-[12px] font-bold bg-spotify-green hover:bg-[#1ed760] py-2.5 rounded-full gap-2 text-black transition-all">
+          <button 
+                onClick={() => document.getElementById('snapshot')?.scrollIntoView({ behavior: 'smooth' })}
+                className="flex-1 flex items-center justify-center text-[12px] font-bold bg-spotify-green hover:bg-[#1ed760] py-2.5 rounded-full gap-2 text-black transition-all"
+              >
             Snapshot <FaArrowDown />
           </button>
 
           <button
             onClick={onSetExperienceSection}
-            className="flex-1 flex items-center justify-center text-[12px] font-bold border border-[#727272] hover:border-white text-white py-2.5 rounded-full gap-2 transition-all"
+            className="hidden md:flex flex-1 items-center justify-center text-[12px] font-bold border border-[#727272] hover:border-white text-white py-2.5 rounded-full gap-2 transition-all"
           >
             Projects <GrLinkNext />
           </button>

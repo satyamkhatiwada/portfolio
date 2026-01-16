@@ -11,7 +11,7 @@ export default function ProfessionalSnapshot() {
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className="flex flex-col gap-3 w-full scroll-mt-100" id="snapshot">
       {/* 1. STATUS BAR (Full Width) */}
       <div className="bg-white/[0.03] border border-white/5 rounded-xl p-3 flex items-center justify-between group hover:bg-white/[0.05] transition-colors">
         <div className="flex items-center gap-3">
@@ -28,7 +28,10 @@ export default function ProfessionalSnapshot() {
       <div className="grid grid-cols-2 gap-3">
         {/* Email Button */}
         <button 
-          onClick={() => handleCopy("satyamkhatiwada10@gmail.com", "email")}
+          onClick={() => {
+            handleCopy("satyamkhatiwada10@gmail.com", "email");
+            window.location.href = "mailto:satyamkhatiwada10@gmail.com";
+          }}
           className={`flex items-center justify-center gap-2 p-3 rounded-xl border transition-all ${
             copiedLabel === "email" 
               ? "bg-spotify-green/10 border-spotify-green/50 text-white" 
@@ -43,7 +46,10 @@ export default function ProfessionalSnapshot() {
 
         {/* WhatsApp Button */}
         <button 
-          onClick={() => handleCopy("+977 9861308915", "wa")}
+          onClick={() => {
+            handleCopy("+9779861308915", "wa");
+            window.open("https://wa.me/9779861308915", "_blank");
+          }}
           className={`flex items-center justify-center gap-2 p-3 rounded-xl border transition-all ${
             copiedLabel === "wa" 
               ? "bg-spotify-green/10 border-spotify-green/50 text-white" 
