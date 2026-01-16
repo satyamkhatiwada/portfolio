@@ -14,23 +14,20 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://satyamkhatiwada.com.np"),
 
   title: {
-    default: "Satyam Khatiwada",
+    default: "Satyam Khatiwada | AI-Powered QA & Cyber Security",
     template: "%s | Satyam Khatiwada",
   },
 
   description:
-    "QA Engineer and software enthusiast exploring quality engineering, modern web technologies, and thoughtful digital experiences.",
+    "QA Engineer & Cyber Security Enthusiast leveraging AI to build resilient systems, automate complex testing, and secure modern web applications.",
 
   keywords: [
     "Satyam Khatiwada",
-    "QA Engineer",
-    "Quality Assurance",
-    "Software Testing",
-    "Automation Testing",
-    "Frontend Development",
-    "Web Development",
-    "Tech Blog",
-    "Personal Portfolio",
+    "AI-Powered QA Engineer",
+    "AI in Software Testing",
+    "Cyber Security",
+    "Automated Testing",
+    "Nepal Tech Professional",
   ],
 
   creator: "Satyam Khatiwada",
@@ -45,13 +42,13 @@ export const metadata: Metadata = {
     ],
   },
 
-  openGraph: {
+openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://satyamkhatiwada.com.np",
-    title: "Satyam Khatiwada | QA Engineer & Software Enthusiast",
+    title: "Satyam Khatiwada | AI-Augmented QA & Cyber Security",
     description:
-      "Spotify-inspired personal portfolio and blog sharing projects, QA insights, and lessons from building reliable software.",
+      "Exploring the intersection of Quality Engineering, Cyber Security, and Artificial Intelligence.",
     siteName: "Satyam Khatiwada",
     images: [
       {
@@ -67,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Satyam Khatiwada | QA Engineer",
     description:
-      "Personal portfolio and blog focused on quality engineering, testing, and modern web development.",
+      "QA Engineer & Cyber Security Enthusiast dedicated to building resilient systems, exploring automated testing, and securing modern web technologies.",
     images: [`/satyam_title.png`],
   },
 
@@ -116,16 +113,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Satyam Khatiwada",
-              url: "https://satyamkhatiwada.com.np",
-              image: "https://satyamkhatiwada.com.np/satyam_title.png",
-              sameAs: [
-                "https://www.linkedin.com/in/satyam-khatiwada",
-                "https://github.com/satyamkhatiwada",
-              ],
-              jobTitle: "QA Engineer",
-              description:
-                "QA Engineer passionate about building reliable software, improving user experience, and sharing knowledge through writing.",
+              "name": "Satyam Khatiwada",
+              "url": "https://satyamkhatiwada.com.np",
+              "jobTitle": "AI-Powered QA Engineer & Cyber Security Enthusiast",
+              "description": "QA Engineer utilizing AI for advanced software testing and security research.",
+              "knowsAbout": [
+                "Software Quality Assurance",
+                "Cyber Security",
+                "Artificial Intelligence",
+                "Test Automation"
+              ]
             }),
           }}
         />
