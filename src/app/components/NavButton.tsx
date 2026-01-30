@@ -7,7 +7,7 @@ interface ButtonProps {
 export default function NavButton({ name }: ButtonProps) {
   return (
     <a
-      href="/resume.pdf" 
+      href="/Satyam_Khatiwada_Resume.pdf" 
       download="Satyam_Khatiwada_Resume.pdf"
     >
       <button

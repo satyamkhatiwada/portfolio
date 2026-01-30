@@ -21,7 +21,7 @@ export default function ProfessionalSnapshot() {
           </span>
           <span className="text-[10px] font-bold uppercase tracking-widest text-spotify-green">Live Status</span>
         </div>
-        <span className="text-xs font-semibold text-white">Available for Freelance & Remote Roles</span>
+        <span className="text-xs font-semibold text-white">Open to Full-Time Roles</span>
       </div>
 
       {/* 2. CONTACT ROW (Side-by-Side Split) */}
