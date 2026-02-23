@@ -81,6 +81,19 @@ const experienceLists: experienceListsProps[] = [
   {
     companyName: "Qniverse Pvt. Ltd.",
     url: "https://qniverse.co.uk/",
+    positionTitle: "QA Consultant",
+    date: "February 2026 - Present",
+  },
+  {
+    companyName: "Career Break",
+    url: "",
+    positionTitle: "Career Break",
+    date: "October 2025 - January 2026",
+  },
+  
+  {
+    companyName: "Qniverse Pvt. Ltd.",
+    url: "https://qniverse.co.uk/",
     positionTitle: "Software QA Engineer",
     date: "October 2024 - October 2025",
   },
