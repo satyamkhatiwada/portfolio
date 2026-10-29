@@ -1,30 +1,3 @@
-// data/projects.ts
-export type personalProjectType = {
-  href: string;
-  imageSrc: string;
-  imageAlt: string;
-  title: string;
-  description: string;
-  tech: string[];
-}[];
-
-
-export const getDynamicUpdatedDate = (): string => {
-  const date = new Date();
-  // Logic: Current date minus 5 days
-  const dayOfWeek = date.getDay();
-
-  date.setDate(date.getDate() - (dayOfWeek + 5));  
-
-  return new Intl.DateTimeFormat('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  }).format(date);
-};
-
-
-
 export const personalProjects: personalProjectType = [
   {
     href: "https://www.fablefintech.com/",
@@ -32,17 +5,30 @@ export const personalProjects: personalProjectType = [
     imageAlt: "Global Remittance System 🌍",
     title: "Global Remittance System 🌍",
     description:
-      "Reverse-engineered an undocumented remittance system to establish complete functional and technical documentation. Defined requirements, mapped APIs and JSP workflows, and executed AI powered automated and performance testing to validate end-to-end functionality.",
-    tech: ["Document Preparation", "Client Communication", "Project Management", "Power Automate", "SQL", "Postman", "Excel"],
+      "Reverse-engineered an undocumented global remittance system to establish comprehensive functional and technical documentation. Defined requirements, mapped APIs and JSP workflows, and performed AI-assisted automated and performance testing to validate end-to-end functionality and system reliability.",
+    tech: [
+      "SQL",
+      "Playwright",
+      "TypeScript",
+      "Power Automate",
+      "Excel",
+    ],
   },
   {
     href: "https://www.siriusapp.co.uk/apps/siriuspayroll365-hmrc-payroll-software-uk/",
     imageSrc: `/payroll.png`,
-    imageAlt: "Payroll System 🇬🇧💷",
+    imageAlt: "Multi-Country Payroll System 🇬🇧💷",
     title: "UK (HMRC) Payroll System 🇬🇧💷",
     description:
-      "QA expertise and automated scripts to ensure compliance with uk rules through integration tests.",
-    tech: ["Business Central", "Excel", "AI-Powered Testing", "HMRC Compliance", "API Testing", "Automation", "UAT", ".NET"],
+      "Performed QA and automated integration testing for multi-country payroll covering Denmark, Singapore, New Zealand, and the UK. Validated payroll calculations against statutory requirements and changing UK regulations. Identified a defect in HMRC's official UK payroll calculator during payroll validation.",
+    tech: [
+      "Playwright",
+      "TypeScript",
+      "AL Test Tool",
+      "HMRC Compliance",
+      "Integration Testing",
+      "Payroll Automation",
+    ],
   },
   {
     href: "https://www.microsoft.com/en-us/dynamics-365/solutions/crm",
@@ -50,8 +36,15 @@ export const personalProjects: personalProjectType = [
     imageAlt: "D365 CRM System 🧑‍💼",
     title: "D365 CRM System 🧑‍💼",
     description:
-      "Handled end-to-end client requirements, performed risk analysis, data migration/testing, and resolved system-level issues. Maintained consistent client communication to ensure successful delivery and alignment with business objectives.",
-    tech: ["Product Testing", "Usability Testing", "Data Migration Testing"],
+      "Managed end-to-end client requirements, conducted risk analysis, and performed data migration and system testing. Investigated system-level issues and maintained regular client communication to ensure solution quality, successful delivery, and alignment with business requirements.",
+    tech: [
+      "Microsoft Dynamics 365 CRM",
+      "Dynamics 365 Business Central",
+      "SQL",
+      "Power Automate",
+      "Excel",
+      "Data Migration Testing",
+    ],
   },
   {
     href: "https://www.microsoft.com/en-us/dynamics-365/products/field-service",
@@ -59,8 +52,15 @@ export const personalProjects: personalProjectType = [
     imageAlt: "D365 Field Service System 🚚",
     title: "D365 Field Service System 🚚",
     description:
-      "Performed QA and validation of the D365 Field Service system based on client requirements. Tested workflows, scheduling, and reporting features, ensuring seamless functionality across mobile and web platforms.",
-    tech: ["Usability Testing", "Mobile App Testing", "Workflow Validation"],
+      "Performed quality assurance and functional validation of Microsoft Dynamics 365 Field Service against client requirements. Tested workflows, scheduling, and reporting features to ensure reliable functionality across web and mobile platforms.",
+    tech: [
+      "Microsoft Dynamics 365",
+      "Power Automate",
+      "Excel",
+      "Python",
+      "Workflow Testing",
+      "Mobile App Testing",
+    ],
   },
   {
     href: "https://github.com/satyamkhatiwada/Restaurant-Management-System-for-Enthrone-Cafe",
@@ -68,9 +68,13 @@ export const personalProjects: personalProjectType = [
     imageAlt: "Restaurant Management System 🍽️",
     title: "Restaurant Management System 🍽️",
     description:
-      "A web app that streamlined bookings, online ordering with secure e-payments, improving service efficiency. Integrated inventory management to optimize stock levels and reduce waste.",
+      "Developed a restaurant management web application to streamline table bookings and online food ordering. Integrated secure electronic payment functionality to improve the convenience and efficiency of restaurant operations.",
     tech: [
-      "HTML/CSS","Laravel","PHP","MySQL","Git", "Trello"
+      "HTML",
+      "CSS",
+      "Laravel",
+      "PHP",
+      "MySQL",
     ],
   },
   {
@@ -79,9 +83,13 @@ export const personalProjects: personalProjectType = [
     imageAlt: "Full Stack Blog Platform 📝",
     title: "Full Stack Blog Platform 📝",
     description:
-      "A blog platform with user interactions, posting features, and admin dashboards for data visualization.",
+      "Developed a full-stack blog platform featuring article publishing, user interactions, and an administrative dashboard. Built the application using a React frontend and a .NET backend with database integration to support content management and user engagement.",
     tech: [
-      "ReactJS", ".NET Core", "Entity Framework", "Azure DevOps", "Chakra UI", "PostGreSQL"
+      "React.js",
+      ".NET",
+      "Entity Framework Core",
+      "Chakra UI",
+      "PostgreSQL",
     ],
   },
 ];

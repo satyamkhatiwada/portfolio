@@ -104,10 +104,10 @@ function PersonalStatement() {
       </div>
       <h4 className="text-sm">
         <span>
-          I&apos;m a QA Engineer with 2+ years of experience, starting as an{" "}
+          I&apos;m a QA Engineer with 3+ years of experience, starting as an{" "}
           <span className="text-spotify-green">intern</span> and 
           quickly growing into a{" "}  
-          <span className="text-spotify-green">mid-level </span>
+          <span className="text-spotify-green">senior level </span>
           role by consistently delivering results and taking 
           ownership. I&apos;ve led multiple projects, worked directly with stakeholders, and 
           supported clients to make sure releases go out smoothly.
@@ -117,10 +117,7 @@ function PersonalStatement() {
           
           I like working smart and adapting quickly. I use automation, AI, and{" "}
           <span className="text-spotify-green">modern 
-          tools</span> to reduce repetitive work and improve efficiency. I also have a strong interest 
-          in cybersecurity and believe security should always be a core part of building reliable 
-          software. I enjoy fast-paced environments, learning from feedback, and continuously 
-          improving my craft.
+          tools</span> to reduce repetitive work and improve efficiency. I enjoy taking ownership, supporting teammates, and stepping up when leadership is needed. I believe in clear communication, sharing knowledge, and helping teams work toward common goals. I enjoy fast-paced environments, learning from feedback, and continuously improving my craft.
         </span>
       </h4>
     </div>
