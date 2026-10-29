@@ -1,3 +1,29 @@
+
+ // data/projects.ts
+
+export type personalProjectType = {
+  href: string;
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+  tech: string[];
+}[];
+
+export const getDynamicUpdatedDate = (): string => {
+  const date = new Date();
+  // Logic: Current date minus (day of week + 5) days
+  const dayOfWeek = date.getDay();
+
+  date.setDate(date.getDate() - (dayOfWeek + 5));
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
+};
+
 export const personalProjects: personalProjectType = [
   {
     href: "https://www.fablefintech.com/",
