@@ -69,9 +69,9 @@ const languageItems: {
     ),
   },
   {
-    name: "MS Dynamics",
+    name: "Typescript",
     component: (
-      <Image src="/dynamics.svg" width={32} height={32} alt="MS Dynamics" />
+      <Image src="/typescript.svg" width={32} height={32} alt="Typescript" unoptimized />
     ),
   },
   {
@@ -87,9 +87,9 @@ const languageItems: {
     ),
   },
   {
-    name: ".NET",
+    name: "JavaScript",
     component: (
-      <Image src="https://api.iconify.design/logos:dotnet.svg" width={32} height={32} alt=".NET" unoptimized />
+      <Image src="https://cdn.simpleicons.org/javascript/F7DF1E" width={32} height={32} alt="JavaScript" unoptimized />
     ),
   },
 ];
