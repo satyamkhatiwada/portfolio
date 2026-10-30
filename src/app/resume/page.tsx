@@ -31,18 +31,7 @@ export default function ResumePage() {
         src="/Satyam_Khatiwada_Resume.pdf"
         title="Satyam Khatiwada CV"
         className="h-[80vh] min-h-[600px] w-full rounded-xl border border-white/10 bg-white"
-      >
-        <p className="p-4 text-spotify-black">
-          Your browser cannot display this PDF.{" "}
-          <a
-            href="/Satyam_Khatiwada_Resume.pdf"
-            className="underline"
-          >
-            Open the CV
-          </a>
-          .
-        </p>
-      </iframe>
+      />
     </main>
   );
 }

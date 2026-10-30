@@ -7,14 +7,16 @@ import { ReactNode } from "react";
 import { PiLineVerticalThin } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
-import { LuNewspaper } from "react-icons/lu";
+import { LuFileText, LuNewspaper } from "react-icons/lu";
 import SocialLinks from "./SocialLinks";
 import MobileNav from "./MobileNav";
 import { TypewriterEffect } from "./ui/type-writer-effect";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigation(): ReactNode {
   const [mobile, setMobile] = useState<boolean>(false);
+  const pathname = usePathname();
 
   function handleMobile(): void {
     setMobile((prev) => !prev);
@@ -60,14 +62,18 @@ export default function Navigation(): ReactNode {
             </Link>
             <PiLineVerticalThin className="text-spotify-gray text-4xl" />
             <SocialLinks />
-            <PiLineVerticalThin className="text-spotify-gray text-4xl" />
-            <Link
-              href="/resume"
-              className="rounded-full border border-spotify-green px-4 py-3 font-semibold transition-colors duration-200 hover:bg-spotify-green/10"
-            >
-              View CV
-            </Link>
-            <NavButton name="Download CV" />
+            {pathname !== "/resume" && (
+              <>
+                <PiLineVerticalThin className="text-spotify-gray text-4xl" />
+                <Link
+                  href="/resume"
+                  className="flex items-center gap-2 rounded-full bg-spotify-green px-4 py-2.5 font-semibold text-spotify-black transition-colors duration-200 hover:bg-spotify-dark-green"
+                >
+                  <LuFileText aria-hidden="true" />
+                  <span>View CV</span>
+                </Link>
+              </>
+            )}
           </section>
         </section>
         {mobile && <MobileNav handleMobile={handleMobile} />}

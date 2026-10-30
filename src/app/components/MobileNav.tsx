@@ -1,7 +1,6 @@
 "use client";
 
 import SocialLinks from "./SocialLinks";
-import NavButton from "./NavButton";
 import { LuNewspaper } from "react-icons/lu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,27 +11,23 @@ interface MobileNavProps {
 
 export default function MobileNav({ handleMobile }: MobileNavProps) {
   const pathname = usePathname();
-  const isOnBlogPage = pathname?.startsWith("/blog");
+  const isOnHomePage = pathname === "/";
 
   const links = [
-    // { section: "Profile", href: "#profile" },
     {
       section: "Experience",
-      href: isOnBlogPage ? "/#experience" : "#experience",
+      href: isOnHomePage ? "#experience" : "/#experience",
     },
     {
       section: "Skills",
-      href: isOnBlogPage ? "/#programming-languages" : "#programming-languages",
+      href: isOnHomePage ? "#programming-languages" : "/#programming-languages",
     },
-    { section: "Projects", href: isOnBlogPage ? "/#project" : "#project" },
+    { section: "Projects", href: isOnHomePage ? "#project" : "/#project" },
     {
       section: "Recommendations",
-      href: isOnBlogPage ? "/#QAStatus" : "#Recommendations",
+      href: isOnHomePage ? "#Recommendations" : "/#Recommendations",
     },
-    {
-      section: "Snapshot",
-      href: isOnBlogPage ? "/#ProfessionalSnapshot" : "#snapshot",
-    },
+    ...(pathname === "/resume" ? [] : [{ section: "View CV", href: "/resume" }]),
   ];
 
   return (
@@ -74,7 +69,7 @@ export default function MobileNav({ handleMobile }: MobileNavProps) {
         </Link>
       </div>
 
-      {/* Social Links and Resume */}
+      {/* Social links */}
       <div
         className="flex flex-row gap-5 p-3 items-center justify-center animate-in slide-in-from-bottom-2  border-spotify-green/10"
         style={{
@@ -83,14 +78,6 @@ export default function MobileNav({ handleMobile }: MobileNavProps) {
         }}
       >
         <SocialLinks />
-        <Link
-          href="/resume"
-          onClick={handleMobile}
-          className="rounded-full border border-spotify-green px-4 py-3 font-semibold transition-colors duration-200 hover:bg-spotify-green/10"
-        >
-          View CV
-        </Link>
-        <NavButton name="Download CV" />
       </div>
     </nav>
   );
