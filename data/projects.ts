@@ -119,3 +119,4 @@ export const personalProjects: personalProjectType = [
     ],
   },
 ];
+kring

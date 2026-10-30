@@ -36,7 +36,7 @@ export default function MobileNav({ handleMobile }: MobileNavProps) {
   ];
 
   return (
-    <nav className="bg-spotify-light-dark flex flex-col text-left sm:hidden overflow-hidden animate-in slide-in-from-top-2 duration-300 ease-out">
+    <nav className="bg-spotify-light-dark flex flex-col text-left md:hidden overflow-hidden animate-in slide-in-from-top-2 duration-300 ease-out">
       {/* Portfolio Sections */}
       {links.map((link, index) => (
         <div
@@ -83,7 +83,14 @@ export default function MobileNav({ handleMobile }: MobileNavProps) {
         }}
       >
         <SocialLinks />
-        <NavButton name="Resume"></NavButton>
+        <Link
+          href="/resume"
+          onClick={handleMobile}
+          className="rounded-full border border-spotify-green px-4 py-3 font-semibold transition-colors duration-200 hover:bg-spotify-green/10"
+        >
+          View CV
+        </Link>
+        <NavButton name="Download CV" />
       </div>
     </nav>
   );
